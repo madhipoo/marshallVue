@@ -1,0 +1,182 @@
+/*infomation-start*/
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.info {
+    color: #fff;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.info .container {
+    width: 100%;
+    padding: 50px 30px;
+    margin: 5px auto;
+}
+
+.info .container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info .container .row h6 {
+    font-size: 16px;
+    padding-bottom: .6em;
+}
+
+.info .container .row .col-6 {
+    flex: 0 0 16.6666667%;
+    max-width: 16.666667%;
+    position: relative;
+    width: 100%;
+}
+
+.info .container .row a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.info .container .row a:hover {
+    color: #aaa;
+}
+
+.info .container .row .col-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    position: relative;
+    width: 100%;
+}
+
+.info .container .row .col-12 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+}
+
+.info .container .row .col-12 .product-info-list .info-product {
+    display: inline-block;
+    border: 2px solid #fff;
+    width: 85px;
+    height: 85px;
+    position: relative;
+    margin: 10px 5px;
+    box-sizing: border-box;
+}
+
+.info .container .row .col-12 .product-info-list .info-product p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info .container .row .col-4 .contact {
+    position: relative;
+    bottom: -65px;
+    margin: 10px;
+}
+
+#speakerimg::before,
+#headpkoneimg::before,
+#accessoryimg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+#speakerimg:hover:before,
+#headpkoneimg:hover::before,
+#accessoryimg:hover::before {
+    opacity: 1;
+}
+
+#speakerimg::before {
+    background-image: url('../../pic/配件1.png');
+}
+
+#headpkoneimg::before {
+    background-image: url('../../pic/配件2.png');
+}
+
+@media screen and (max-width: 1199px) {
+    .info .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .info .container {
+        max-width: 960px;
+    }
+    .info .container .row .col-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .info .container .row .col-12 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .info .container .row .col-4 .contact {
+        bottom: 0;
+        margin: 10px;
+    }
+    .info .container .row .col-4 .contact a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .info .container {
+        max-width: 720px;
+    }
+    .info .container .row .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .info .container .row .col-12 {
+        margin: 10px;
+    }
+    .info .container .row .col-12,
+    .info .container .row .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .info .container .row .col-12 .product-info-list .info-product {
+        width: 100px;
+        height: 100px;
+    }
+    .info .container .row .col-4 .contact {
+        bottom: 0;
+        margin: 10px;
+    }
+    #speakerimg::before,
+    #headpkoneimg::before,
+    #accessoryimg::before {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .info .container {
+        max-width: 540px;
+    }
+    .info .container .row .col-12,
+    .info .container .row .col-4 .contact {
+        margin: 0px;
+    }
+}
+
+
+/*infomation-end*/
