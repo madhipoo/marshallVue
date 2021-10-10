@@ -23,8 +23,10 @@
     </div>
 </template>
 <script>
-(function() {
-            var bodyClass = document.body.classList
+export default {
+    name:'Header',
+    created() {
+        var bodyClass = document.body.classList
 
             window.addEventListener('scroll', function() {
                 var st = this.scrollY;
@@ -35,8 +37,6 @@
                     bodyClass.add('hideUp');
                 }
             });
-        })()
-export default {
-    name:'Header',
+    },
 }
 </script>

@@ -1,49 +1,28 @@
 <template>
     <div>
-        <div class="slider">
+        <div class="slider" v-for="(item,index) in myslide" :key="index">
             <div class="myslider fade" style="display: block;">
                 <div class="txt">
-                    <h1>Acton II</h1>
-                    <p>藍牙音箱，限時搶購</p>
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.context}}</p>
                 </div>
                 <p class="button">
-                    <a href="./Speakers/ACTON II BLUETOOTH/index.html" class="knewnow">了解更多</a>
+                    <a :href="item.gotoweb" class="knewnow">了解更多</a>
                 </p>
-                <img src="@/assets/幻燈片1.jpg" alt="" style="width:100%; height:100%;">
+                <img :src="item.sliderimg" alt="" style="width:100%; height:100%;">
             </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>EMBERTON</h1>
-                    <p>搖滾，一手掌握</p>
-                </div>
-                <p class="button">
-                    <a href="./Speakers/Emberton/index.html" class="knewnow">了解更多</a>
-                </p>
-                <!--<img src="@/assets/幻燈片2.jfif" alt="" style="width:100%; height:100%;">-->
-            </div>
-            <div class="myslider fade">
-                <div class="txt">
-                    <h1>BUILT FOR LOUD</h1>
-                    <p>MoDE II 重磅登場，限定通路搶購中</p>
-                </div>
-                <p class="button">
-                    <a href="./Headphones/MODE II/index.html" class="knewnow">了解更多</a>
-                </p>
-                <img src="@/assets/幻燈片3.jpeg" alt="" style="width:100%; height:100%;">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <div class="dotsbox" style="text-align: center;">
+            
+            
+            <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+            <a class="next" @click="plusSlides(1)">&#10095;</a>
+            <!--<div class="dotsbox" style="text-align: center;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
 
-            </div>
+            </div>-->
 
         </div>
-
-
 
 
         <div class="scrollanchor">
@@ -67,36 +46,17 @@
 
         <div class="product">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" v-for= "(item,index) in product" :key = "index">
                     <div class="col-md-4">
                         <div class="description">
-                            <h5 class="producttitle">Bluetooth英搖經典</h5>
+                            <h5 class="producttitle">{{item.producttitle}}</h5>
                             <p class="button">
-                                <a href="./Speakers/WOBURN II BLUETOOTH/index.html" class="buynow">馬上選購</a>
+                                <a :href="item.gotoweb" class="buynow">馬上選購</a>
                             </p>
+                            
                         </div>
 
-                        <img src="@/assets/英國搖滾.jfif" alt="" class="product-pic">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="description">
-                            <h5 class="producttitle">Major IV</h5>
-                            <p class="button">
-                                <a href="./Headphones/MAJOR IV/index.html" class="buynow">馬上選購</a>
-                            </p>
-                        </div>
-
-                        <img src="@/assets/marshall_majorIV_1005 .jpg" alt="" class="product-pic">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="description">
-                            <h5 class="producttitle">Stockwell II藍芽喇叭</h5>
-                            <p class="button">
-                                <a href="./Speakers/STOCKWELL II/index.html" class="buynow">馬上選購</a>
-                            </p>
-                        </div>
-
-                        <!--<img src="@/assets/手提式音箱.jfif" alt="" class="product-pic">-->
+                        <img :src="item.productimg" alt="" class="product-pic">
                     </div>
                 </div>
                 <div class="row">
@@ -134,56 +94,98 @@
     </div>
 </template>
 <script>
-const myslide = document.querySelectorAll('.myslider'),
-            dot = document.querySelectorAll('.dot');
-        let counter = 1;
-        slidefun(counter);
+        // const myslide = document.querySelectorAll('.myslider'),
+        // dot = document.querySelectorAll('.dot');
+        // let counter = 1;
+        
+//         slidefun(counter);
 
-        let timer = setInterval(autoslide, 8000);
+//         let timer = setInterval(autoslide, 8000);
 
-        function autoslide() {
-            counter += 1;
-            slidefun(counter);
-        }
+//         function autoslide() {
+//             counter += 1;
+//             slidefun(counter);
+//         }
 
-        function plusSlides(n) {
-            counter += n;
-            slidefun(counter);
-            resetTimer();
-        }
+        // function plusSlides(n) {
+        //     counter += n;
+        //     slidefun(counter);
+        //     resetTimer();
+        // }
 
-        function currentSlide(n) {
-            counter = n;
-            slidefun(counter);
-            resetTimer();
-        }
+//         function currentSlide(n) {
+//             counter = n;
+//             slidefun(counter);
+//             resetTimer();
+//         }
 
-        function resetTimer() {
-            clearInterval(timer);
-            timer = setInterval(autoslide, 8000);
-        }
+//         function resetTimer() {
+//             clearInterval(timer);
+//             timer = setInterval(autoslide, 8000);
+//         }
 
-        function slidefun(n) {
-            let i;
-            for (i = 0; i < myslide.length; i++) {
-                myslide[i].style.display = "none";
-            }
-            for (i = 0; i < dot.length; i++) {
-                dot[i].classList.remove('active');
-            }
-            if (n > myslide.length) {
-                counter = 1;
-            }
-            if (n < 1) {
-                counter = myslide.length;
-            }
+        // function slidefun(n) {
+        //     let i;
+        //     for (i = 0; i < myslide.length; i++) {
+        //         myslide[i].style.display = "none";
+        //     }
+        //     for (i = 0; i < dot.length; i++) {
+        //         dot[i].classList.remove('active');
+        //     }
+        //     if (n > myslide.length) {
+        //         counter = 1;
+        //     }
+        //     if (n < 1) {
+        //         counter = myslide.length;
+        //     }
 
-            myslide[counter - 1].style.display = "block";
-            dot[counter - 1].classList.add('active')
-        }
+        //     myslide[counter - 1].style.display = "block";
+        //     dot[counter - 1].classList.add('active')
+        // }
 
 export default {
     name: 'Homeproduct',
+    data(){
+        return{
+            counter: 0,
+            myslide:[{
+                title:"Acton II",
+                context:"藍牙音箱，限時搶購",
+                gotoweb:"./Speakers/ACTON II BLUETOOTH/index.html",
+                sliderimg:"@/assets/幻燈片1.jpg",
+            },{
+                title:"EMBERTON",
+                context:"搖滾，一手掌握",
+                gotoweb:"./Speakers/Emberton/index.html", 
+                sliderimg:"@/assets/幻燈片2.jfif",
+            },{
+                title:"BUILT FOR LOUD",
+                context:"MoDE II 重磅登場，限定通路搶購中",
+                gotoweb:"./Headphones/MODE II/index.html", 
+                sliderimg:"@/assets/幻燈片3.jpeg",
+            },],
+            product:[{
+                producttitle:"Bluetooth英搖經典",
+                gotoweb:"./Speakers/WOBURN II BLUETOOTH/index.html",
+                productimg:"@/assets/英國搖滾.jfif",
+            },{
+                producttitle:"Major IV",
+                gotoweb:"./Headphones/MAJOR IV/index.html",
+                productimg:"@/assets/marshall_majorIV_1005 .jpg",
+            },{
+                producttitle:"Stockwell II藍芽喇叭",
+                gotoweb:"./Speakers/STOCKWELL II/index.html",
+                productimg:"@/assets/手提式音箱.jfif",
+            },]
+        }
+    },
+    methods:{
+        plusSlides(n) {
+            this.counter += n;
+            // slidefun(counter);
+            // resetTimer();
+        },
+    },
 } 
 </script>
 <style scoped lang="scss">

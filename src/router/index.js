@@ -7,8 +7,15 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
-        path: '/',
-        name: 'Homepage',
-        component: Homepage
-    }, ]
+            path: '/',
+            name: 'Homepage',
+            component: Homepage,
+            children: [{
+                path: '',
+                name: 'Homeproduct',
+                component: Homeproduct,
+            }]
+        },
+
+    ]
 })
