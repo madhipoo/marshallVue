@@ -26,7 +26,11 @@
 export default {
     name:'Header',
     created() {
-        var bodyClass = document.body.classList
+        this.$_hide();
+    },
+    methods:{
+        $_hide(){
+            var bodyClass = document.body.classList
 
             window.addEventListener('scroll', function() {
                 var st = this.scrollY;
@@ -37,6 +41,7 @@ export default {
                     bodyClass.add('hideUp');
                 }
             });
-    },
+        }
+    }
 }
 </script>
