@@ -1,7 +1,12 @@
 <template>
   <div>
-    <div class="slider" v-for="(item, index) in myslide" :key="index">
-      <div class="myslider fade" style="display: block" >
+    <div class="slider" >
+      <div
+        class="myslider fade"
+        v-for="(item, index) in myslide"
+        :key="index"
+        :class="{ active: counter === index }"
+      >
         <div class="txt">
           <h1>{{ item.title }}</h1>
           <p>{{ item.context }}</p>
@@ -16,14 +21,13 @@
         />
       </div>
 
-      <a class="prev" @click="$_plusSlides(-1)">{{ counter }}&#10094;</a>
-      <a class="next" @click="$_plusSlides(1)">&#10095;</a>
-      <!--<div class="dotsbox" style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-
-            </div>-->
+      <a class="prev" @click.prevent="$_plusSlides(-1)">&#10094;</a>
+      <a class="next" @click.prevent="$_plusSlides(1)">&#10095;</a>
+      <div class="dotsbox" style="text-align: center">
+        <span class="dot" @click.prevent="$_currentSlide(0)" :class="{active:counter === 0}"></span>
+        <span class="dot" @click.prevent="$_currentSlide(1)" :class="{active:counter === 1}"></span>
+        <span class="dot" @click.prevent="$_currentSlide(2)" :class="{active:counter === 2}"></span>
+      </div>
     </div>
 
     <div class="scrollanchor">
@@ -101,20 +105,6 @@
   </div>
 </template>
 <script>
-// const myslide = document.querySelectorAll('.myslider'),
-// dot = document.querySelectorAll('.dot');
-// let counter = 1;
-//         function currentSlide(n) {
-//             counter = n;
-//             slidefun(counter);
-//             resetTimer();
-//         }
-
-//         function resetTimer() {
-//             clearInterval(timer);
-//             timer = setInterval(autoslide, 8000);
-//        }
-
 export default {
   name: "Homeproduct",
   data() {
@@ -157,45 +147,40 @@ export default {
           productimg: "手提式音箱.jfif",
         },
       ],
+      timer: null,
     };
   },
   created() {
-    var timer = setInterval(this.$_autoslide, 1000);
     this.$_slidefun(this.counter);
+    this.timer = setInterval(() => this.$_autoSlide(), 8000);
   },
   methods: {
-    $_slidefun: function(n) {
-      
-      // let i;
-      // for (i = 0; i < this.myslide.length; i++) {
-      //   this.myslide[i].style.display = "none";
-      // }
-      // for (i = 0; i < dot.length; i++) {
-      //   dot[i].classList.remove("active");
-      // }
-      if (n > this.myslide.length) {
+    $_slidefun: function (n) {
+      if (n >= this.myslide.length) {
         this.counter = 0;
       }
       if (n < 0) {
-        this.counter = this.myslide.length;
+        this.counter = this.myslide.length - 1;
       }
-
-      // this.myslide[this.counter - 1].style.display = "block";
-      // dot[this.counter - 1].classList.add("active");
     },
-    $_plusSlides: function(n) {
+    $_plusSlides: function (n) {
       this.counter += n;
       this.$_slidefun(this.counter);
       this.$_resetTimer();
     },
-    $_autoSlide: function() {
+    $_currentSlide: function (n) {
+      this.counter = n;
+      this.$_slidefun(this.counter);
+      this.$_resetTimer();
+    },
+    $_autoSlide: function () {
       this.counter += 1;
       this.$_slidefun(this.counter);
     },
-    $_resetTimer: function() {
-            clearInterval(timer);
-            timer = setInterval(this.$_autoslide, 1000);
-       },
+    $_resetTimer: function () {
+      clearInterval(this.timer);
+      this.timer = setInterval(() => this.$_autoSlide(), 8000);
+    },
   },
 };
 </script>
@@ -205,113 +190,102 @@ export default {
   position: relative;
   width: 100%;
   background: #2c3e50;
-}
-
-.slider .myslider {
-  height: 100vh;
-  display: none;
-  overflow: hidden;
-}
-
-.slider .prev,
-.slider .next {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  font-size: 50px;
-  padding: 15px;
-  cursor: pointer;
-  transition: 0.1s;
-  color: #fff;
-  text-decoration: none;
-}
-
-.slider .prev:hover,
-.slider .next:hover {
-  color: #3498db;
-}
-
-.slider .next {
-  right: 0;
-}
-
-.slider .dotsbox {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 20px;
-  cursor: pointer;
-}
-
-.slider .dotsbox .dot {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-.slider .dotsbox .active,
-.slider .dotsbox .dot:hover {
-  border-color: #3498db;
-}
-
-.slider .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.slider .myslider .txt {
-  position: absolute;
-  color: #fff;
-  letter-spacing: 2px;
-  line-height: 35px;
-  top: 40%;
-  left: 15%;
-  animation-name: posi;
-  animation-duration: 2s;
-  z-index: 1;
-}
-
-.slider .myslider .txt h1 {
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  font-weight: 900;
-  margin: 10px;
-}
-
-.slider .myslider .txt p {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.slider .myslider img {
-  object-fit: cover;
-}
-
-.slider .myslider .knewnow {
-  position: absolute;
-  color: #000;
-  bottom: 20%;
-  left: 15%;
-  background-color: #fff;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px 15px;
-  margin: 0 30px;
-  animation-name: posi;
-  animation-duration: 2s;
-  transition: 0.3s;
-}
-
-.slider .myslider .knewnow:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
+  .myslider {
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+    .txt {
+      position: absolute;
+      color: #fff;
+      letter-spacing: 2px;
+      line-height: 35px;
+      top: 40%;
+      left: 15%;
+      animation-name: posi;
+      animation-duration: 2s;
+      z-index: 1;
+      h1 {
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        font-weight: 900;
+        margin: 10px;
+      }
+      p {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+    img {
+      object-fit: cover;
+    }
+    .knewnow {
+      position: absolute;
+      color: #000;
+      bottom: 20%;
+      left: 15%;
+      background-color: #fff;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 15px;
+      margin: 0 30px;
+      animation-name: posi;
+      animation-duration: 2s;
+      transition: 0.3s;
+    }
+    .knewnow:hover {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .active {
+    display: block;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+    color: #fff;
+    text-decoration: none;
+  }
+  .prev:hover,
+  .next:hover {
+    color: #3498db;
+  }
+  .next {
+    right: 0;
+  }
+  .dotsbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+    .dot {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .active,
+    .dot:hover {
+      border-color: #3498db;
+    }
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 }
 
 @keyframes fade {
@@ -342,119 +316,125 @@ export default {
   height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-.scrollanchor .container {
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 25px;
-}
-
-.scrollanchor .container .row .col1 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.scrollanchor .container .title {
-  position: relative;
-  top: -30px;
-}
-
-.scrollanchor .container .title .maintitle p {
-  color: #fff;
-}
-
-.scrollanchor .container .title .maintitle p:last-child {
-  display: inline;
-  color: #333;
-  background-color: rgba(156, 156, 156, 0.562);
-}
-
-.scrollanchor .container .button {
-  position: relative;
-  bottom: -60px;
-}
-
-.scrollanchor .container .button .buynow {
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px 15px;
-  margin: 0 30px;
-  transition: 0.3s;
-}
-
-.scrollanchor .container .button .buynow:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0);
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 25px;
+    .row .col1 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .title {
+        position: relative;
+        top: -30px;
+        .maintitle {
+          p {
+            color: #fff;
+          }
+          p:last-child {
+            display: inline;
+            color: #333;
+            background-color: rgba(156, 156, 156, 0.562);
+          }
+        }
+      }
+      .button {
+        position: relative;
+        bottom: -60px;
+        .buynow {
+          color: #000;
+          background-color: #fff;
+          border: 2px solid #fff;
+          box-sizing: border-box;
+          text-decoration: none;
+          font-size: 20px;
+          padding: 10px 15px;
+          margin: 0 30px;
+          transition: 0.3s;
+        }
+        .buynow:hover {
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+  }
 }
 /*scrollanchor-end*/
 /*product-start*/
 
 .product {
   position: relative;
-}
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col-md-4 {
+        position: relative;
+        width: 100%;
+        max-width: 33.33333%;
+        overflow: hidden;
+        .description {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          .button {
+            position: absolute;
+            bottom: 50px;
+            cursor: pointer;
+            .buynow {
+              color: #000;
+              background-color: #fff;
+              border: 2px solid #fff;
+              box-sizing: border-box;
+              text-decoration: none;
+              font-size: 20px;
+              padding: 10px 15px;
+              margin: 0 30px;
+              transition: 0.3s;
+            }
 
-.product .container-fluid {
-  width: 100%;
-  margin: 0 auto;
-  /* padding: 0 15px; */
-}
-
-.product .container-fluid .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product .container-fluid .row .col-md-4 {
-  position: relative;
-  width: 100%;
-  max-width: 33.33333%;
-  overflow: hidden;
-}
-
-.product .container-fluid .row .col-md-4 .description {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.product .container-fluid .row .col-md-4 .description .button {
-  position: absolute;
-  bottom: 50px;
-  cursor: pointer;
-}
-
-.producttitle {
-  color: #fff;
-  background-color: #000;
-  display: inline-block;
-  padding: 5px;
-  font-size: 24px;
-  margin: 20px;
-}
-
-.buynow {
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px 15px;
-  margin: 0 30px;
-  transition: 0.3s;
-}
-
-.buynow:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0);
+            .buynow:hover {
+              color: #fff;
+              background-color: rgba(0, 0, 0, 0);
+            }
+          }
+          .producttitle {
+            color: #fff;
+            background-color: #000;
+            display: inline-block;
+            padding: 5px;
+            font-size: 24px;
+            margin: 20px;
+          }
+        }
+        .other {
+          display: block;
+          background-image: radial-gradient(
+              circle at 50% 0,
+              rgba(99, 99, 99, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            linear-gradient(to bottom, #454545, #454545);
+          width: 100%;
+          height: 327px;
+          .othertitle {
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: color 0.3s;
+          }
+        }
+      }
+    }
+  }
 }
 
 .product .container-fluid .row .col-md-4 .product-pic {
@@ -475,31 +455,9 @@ img {
   border-style: none;
 }
 
-.product .container-fluid .row .col-md-4 .other {
-  display: block;
-  background-image: radial-gradient(
-      circle at 50% 0,
-      rgba(99, 99, 99, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    linear-gradient(to bottom, #454545, #454545);
-  width: 100%;
-  height: 327px;
-}
-
-.product .container-fluid .row .col-md-4 .other .othertitle {
-  position: absolute;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: color 0.3s;
-}
-
 .product .container-fluid .row .col-md-4 .other:hover .othertitle {
   color: #000;
 }
-
 .product .container-fluid .row .othertitle-list {
   display: none;
 }
