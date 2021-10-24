@@ -309,7 +309,7 @@ export default {
 /*scrollanchor-start*/
 
 .scrollanchor {
-  background: url("~@/assets/7ef904ecc870de1bf4ac1d485860b3e1.jfif"); /*加入assets中的圖片會出錯*/
+  background: url("~@/assets/7ef904ecc870de1bf4ac1d485860b3e1.jfif");
   background-size: cover;
   background-position: center center;
   width: 100%;

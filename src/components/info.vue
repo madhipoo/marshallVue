@@ -9,7 +9,7 @@
               <a href="./knowus/aboutus.html">關於我們</a>
             </li>
             <li>
-              <a href="./knowus/news.html">最新消息</a>
+              <router-link :to="'News'">最新消息</router-link>
             </li>
           </ul>
         </div>

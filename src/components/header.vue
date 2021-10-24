@@ -1,12 +1,11 @@
 <template>
     <div class="main-header">
         <div class="container">
-            <a href="./Homepage.html" class="logo"><img src="@/assets/marshall.png" alt="logo"></a>
-
+            <router-link :to="'/'" class="logo" ><img src="@/assets/marshall.png" alt="logo"></router-link>
             <input type="checkbox" id="header_check">
             <label for="header_check" class="show_menu_btn"><i class="fa fa-bars"></i></label>
             <ul class="menu">
-                <a href="./knowus/news.html">News</a>
+                <router-link :to="'News'">News</router-link>
                 <a href="./speakers.html">Speaker</a>
                 <a href="./headphone.html">Headphones</a>
                 <div class="header-search">
