@@ -6,8 +6,8 @@
             <label for="header_check" class="show_menu_btn"><i class="fa fa-bars"></i></label>
             <ul class="menu">
                 <router-link :to="'News'">News</router-link>
-                <a href="./speakers.html">Speaker</a>
-                <a href="./headphone.html">Headphones</a>
+                <router-link :to="'Speaker'">Speaker</router-link>
+                <router-link :to="'Headphone'">Headphones</router-link>
                 <div class="header-search">
                     <form class="search-item">
                         <input type="search" name="" id="">
