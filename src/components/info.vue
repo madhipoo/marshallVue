@@ -27,16 +27,16 @@
         <div class="col-12">
           <h6 class="info-title">產品</h6>
           <div class="product-info-list">
-            <a href="./speakers.html">
+            <router-link :to="'speaker'">
               <div class="info-product" id="speakerimg">
                 <p>喇叭</p>
               </div>
-            </a>
-            <a href="./headphone.html">
+            </router-link>
+            <router-link :to="'headphone'">
               <div class="info-product" id="headpkoneimg">
                 <p>耳機</p>
               </div>
-            </a>
+            </router-link>
           </div>
         </div>
         <div class="col-4">
