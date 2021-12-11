@@ -5,9 +5,9 @@
             <input type="checkbox" id="header_check">
             <label for="header_check" class="show_menu_btn"><i class="fa fa-bars"></i></label>
             <ul class="menu">
-                <router-link :to="'news'">News</router-link>
-                <router-link :to="'speaker'">Speaker</router-link>
-                <router-link :to="'headphone'">Headphones</router-link>
+                <router-link :to="'/news'">News</router-link>
+                <router-link :to="'/speaker'">Speaker</router-link>
+                <router-link :to="'/headphone'">Headphones</router-link>
                 <div class="header-search">
                     <form class="search-item">
                         <input type="search" name="" id="">

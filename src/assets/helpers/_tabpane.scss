@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-link {
+  padding: 16px 24px;
+  width: 100%;
+  text-align: left;
+  color: #000;
+  border: 1px solid transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.show {
+  display: block;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-body p {
+  margin-bottom: 16px;
+}
+
+.card-body ol {
+  padding: 0 40px;
+}
+
+.card-body ol li {
+  list-style-type: decimal;
+  /* padding-left: 40px; */
+  margin-block-end: 1em;
+}
+
+.card-body a {
+  text-decoration: none;
+}

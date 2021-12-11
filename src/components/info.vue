@@ -6,10 +6,10 @@
           <h6 class="info-title">認識我們</h6>
           <ul>
             <li>
-              <a href="./knowus/aboutus.html">關於我們</a>
+              <router-link :to="'/news/aboutus'">關於我們</router-link>
             </li>
             <li>
-              <router-link :to="'News'">最新消息</router-link>
+              <router-link :to="'/news'">最新消息</router-link>
             </li>
           </ul>
         </div>
@@ -17,23 +17,29 @@
           <h6 class="info-title">產品支援</h6>
           <ul>
             <li>
-              <a href="./Repair/ques.html">常見問題</a>
+              <router-link :to="'/ques/speaker'">常見問題</router-link>
             </li>
             <li>
-              <a href="./Repair/repair.html">維護保固</a>
+              <router-link :to="'/repair/speaker'">維護保固</router-link>
             </li>
           </ul>
         </div>
         <div class="col-12">
           <h6 class="info-title">產品</h6>
           <div class="product-info-list">
-            <router-link :to="'speaker'">
-              <div class="info-product" id="speakerimg">
+            <router-link :to="'/speaker'">
+              <div
+                class="info-product"
+                id="speakerimg"
+              >
                 <p>喇叭</p>
               </div>
             </router-link>
-            <router-link :to="'headphone'">
-              <div class="info-product" id="headpkoneimg">
+            <router-link :to="'/headphone'">
+              <div
+                class="info-product"
+                id="headpkoneimg"
+              >
                 <p>耳機</p>
               </div>
             </router-link>
@@ -47,8 +53,7 @@
             >
               百滋國際股份有限公司
               <br />
-              台北市信義區基隆路一段141號4樓</a
-            >
+              台北市信義區基隆路一段141號4樓</a>
           </div>
         </div>
         <div class="col-4">
@@ -63,6 +68,6 @@
 </template>
 <script>
 export default {
-    name:'Info',
-}
+  name: "Info",
+};
 </script>

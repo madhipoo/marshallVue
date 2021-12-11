@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="slider" >
+    <div class="slider">
       <div
         class="myslider fade"
         v-for="(item, index) in myslide"
@@ -12,7 +12,10 @@
           <p>{{ item.context }}</p>
         </div>
         <p class="button">
-          <a :href="item.gotoweb" class="knewnow">了解更多</a>
+          <a
+            :href="item.gotoweb"
+            class="knewnow"
+          >了解更多</a>
         </p>
         <img
           :src="require(`@/assets/${item.sliderimg}`)"
@@ -21,12 +24,33 @@
         />
       </div>
 
-      <a class="prev" @click.prevent="$_plusSlides(-1)">&#10094;</a>
-      <a class="next" @click.prevent="$_plusSlides(1)">&#10095;</a>
-      <div class="dotsbox" style="text-align: center">
-        <span class="dot" @click.prevent="$_currentSlide(0)" :class="{active:counter === 0}"></span>
-        <span class="dot" @click.prevent="$_currentSlide(1)" :class="{active:counter === 1}"></span>
-        <span class="dot" @click.prevent="$_currentSlide(2)" :class="{active:counter === 2}"></span>
+      <a
+        class="prev"
+        @click.prevent="$_plusSlides(-1)"
+      >&#10094;</a>
+      <a
+        class="next"
+        @click.prevent="$_plusSlides(1)"
+      >&#10095;</a>
+      <div
+        class="dotsbox"
+        style="text-align: center"
+      >
+        <span
+          class="dot"
+          @click.prevent="$_currentSlide(0)"
+          :class="{active:counter === 0}"
+        ></span>
+        <span
+          class="dot"
+          @click.prevent="$_currentSlide(1)"
+          :class="{active:counter === 1}"
+        ></span>
+        <span
+          class="dot"
+          @click.prevent="$_currentSlide(2)"
+          :class="{active:counter === 2}"
+        ></span>
       </div>
     </div>
 
@@ -44,8 +68,7 @@
               <a
                 href="./Speakers/STANMORE II BLUETOOTH/index.html"
                 class="buynow"
-                >了解更多</a
-              >
+              >了解更多</a>
             </p>
           </div>
         </div>
@@ -55,11 +78,18 @@
     <div class="product">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4" v-for="(item, index) in product" :key="index">
+          <div
+            class="col-md-4"
+            v-for="(item, index) in product"
+            :key="index"
+          >
             <div class="description">
               <h5 class="producttitle">{{ item.producttitle }}</h5>
               <p class="button">
-                <a :href="item.gotoweb" class="buynow">馬上選購</a>
+                <a
+                  :href="item.gotoweb"
+                  class="buynow"
+                >馬上選購</a>
               </p>
             </div>
 
@@ -72,30 +102,40 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <a href="./Repair/repair.html" class="other">
+            <router-link
+              :to="'/repair/speaker'"
+              class="other"
+            >
               <h1 class="othertitle">保固</h1>
-            </a>
+            </router-link>
           </div>
           <div class="col-md-4">
-            <a href="./Repair/repair.html" class="other">
+            <router-link
+              :to="'/repair/speaker'"
+              class="other"
+            >
               <h1 class="othertitle">維修</h1>
-            </a>
+            </router-link>
+
           </div>
           <div class="col-md-4">
-            <a href="./Repair/ques.html" class="other">
+            <router-link
+              :to="'/ques/speaker'"
+              class="other"
+            >
               <h1 class="othertitle">常見問題</h1>
-            </a>
+            </router-link>
           </div>
           <div class="othertitle-list">
             <div class="other">
               <div class="othertitle_m">
-                <a href="./Repair/repair.html">保固</a>
+                <router-link :to="'/repair/speaker'">保固</router-link>
               </div>
               <div class="othertitle_m">
-                <a href="./Repair/repair.html">維修</a>
+                <router-link :to="'/repair/speaker'">維護</router-link>
               </div>
               <div class="othertitle_m">
-                <a href="./Repair/ques.html">常見問題</a>
+                <router-link :to="'/ques/speaker'">常見問題</router-link>
               </div>
             </div>
           </div>
