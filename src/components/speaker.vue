@@ -7,18 +7,18 @@
             <div class="container">
                 <u1 class="nav">
                     <li>
-                        <router-link :to="'speaker'" :class="{ active: counter === 0 }" @click.native="$_changeNum(0)">全部</router-link>
+                        <router-link :to="'/speaker'" :class="{ active: counter === 0 }" @click.native="$_changeNum(0)">全部</router-link>
                     </li>
                     <li>
-                        <router-link :to="'smart'" :class="{ active: counter === 1 }" @click.native="$_changeNum(1)">智慧語音系列</router-link>
+                        <router-link :to="'/speaker/smart'" :class="{ active: counter === 1 }" @click.native="$_changeNum(1)">智慧語音系列</router-link>
                         
                     </li>
                     <li>
-                        <router-link :to="'bluetooth'" :class="{ active: counter === 2 }" @click.native="$_changeNum(2)">藍牙系列</router-link>
+                        <router-link :to="'/speaker/bluetooth'" :class="{ active: counter === 2 }" @click.native="$_changeNum(2)">藍牙系列</router-link>
                         
                     </li>
                     <li>
-                        <router-link :to="'portable'" :class="{ active: counter === 3 }" @click.native="$_changeNum(3)">攜帶式系列</router-link>
+                        <router-link :to="'/speaker/portable'" :class="{ active: counter === 3 }" @click.native="$_changeNum(3)">攜帶式系列</router-link>
                         
                     </li>
                 </u1>

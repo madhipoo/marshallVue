@@ -77,32 +77,32 @@ export default new Router({
           component: HeadphoneAll,
         },
         {
-          path: "/earcanal",
+          path: "earcanal",
           name: "Earcanal",
           component: Earcanal,
         },
         {
-          path: "/overear",
+          path: "overear",
           name: "Overear",
           component: Overear,
         },
         {
-          path: "/noise",
+          path: "noise",
           name: "Noise",
           component: Noise,
         },
         {
-          path: "/earmuff",
+          path: "earmuff",
           name: "Earmuff",
           component: Earmuff,
         },
         {
-          path: "/earbud",
+          path: "earbud",
           name: "Earbud",
           component: Earbud,
         },
         {
-          path: "/wireless",
+          path: "wireless",
           name: "Wireless",
           component: Wireless,
         },

@@ -9,7 +9,7 @@
           <u1 class="nav">
             <li>
               <router-link
-                :to="'headphone'"
+                :to="'/headphone'"
                 :class="{ active: counter === 0 }"
                 @click.native="$_changeNum(0)"
                 >全部</router-link
@@ -17,7 +17,7 @@
             </li>
             <li>
               <router-link
-                :to="'earcanal'"
+                :to="'/headphone/earcanal'"
                 :class="{ active: counter === 1 }"
                 @click.native="$_changeNum(1)"
                 >耳道式</router-link
@@ -25,7 +25,7 @@
             </li>
             <li>
               <router-link
-                :to="'overear'"
+                :to="'/headphone/overear'"
                 :class="{ active: counter === 2 }"
                 @click.native="$_changeNum(2)"
                 >耳罩式</router-link
@@ -33,7 +33,7 @@
             </li>
             <li>
               <router-link
-                :to="'noise'"
+                :to="'/headphone/noise'"
                 :class="{ active: counter === 3 }"
                 @click.native="$_changeNum(3)"
                 >主動式降噪</router-link
@@ -41,7 +41,7 @@
             </li>
             <li>
               <router-link
-                :to="'earmuff'"
+                :to="'/headphone/earmuff'"
                 :class="{ active: counter === 4 }"
                 @click.native="$_changeNum(4)"
                 >藍牙耳罩式</router-link
@@ -49,7 +49,7 @@
             </li>
             <li>
               <router-link
-                :to="'earbud'"
+                :to="'/headphone/earbud'"
                 :class="{ active: counter === 5 }"
                 @click.native="$_changeNum(5)"
                 >藍牙耳塞式</router-link
@@ -57,9 +57,9 @@
             </li>
             <li>
               <router-link
-                :to="'wireless'"
+                :to="'/headphone/wireless'"
                 :class="{ active: counter === 6 }"
-                @click.native="$_changenum(6)"
+                @click.native="$_changeNum(6)"
                 >無線藍牙</router-link
               >
             </li>
