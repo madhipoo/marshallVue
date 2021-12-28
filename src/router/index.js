@@ -23,6 +23,12 @@ import SpeakerAll from "@/components/speaker/All";
 import Bluetooth from "@/components/speaker/Bluetooth";
 import Portable from "@/components/speaker/Portable";
 import Smart from "@/components/speaker/Smart";
+import Tufton from "@/components/speaker/Tufton";
+import Tuftonblack from "@/components/speaker/Tuftonblack";
+import Embertonblack from "@/components/speaker/Embertonblack";
+import Embertonforest from "@/components/speaker/Embertonforest";
+import Embertoncream from "@/components/speaker/Embertoncream";
+import Emberton from "@/components/speaker/Emberton";
 
 import Headphone from "@/components/Headphone";
 import HeadphoneAll from "@/components/headphone/All";
@@ -70,11 +76,11 @@ export default new Router({
           path: "",
           name: "News",
           component: News,
-          children:[
+          children: [
             {
-                path: "allnews",
-                name: "allnews",
-                component: Allnews,
+              path: "allnews",
+              name: "allnews",
+              component: Allnews,
             },
             {
               path: "new1",
@@ -105,7 +111,8 @@ export default new Router({
               path: "new6",
               name: "new6",
               component: New6,
-            },{
+            },
+            {
               path: "new7",
               name: "new7",
               component: New7,
@@ -114,7 +121,8 @@ export default new Router({
               path: "new8",
               name: "new8",
               component: New8,
-            },{
+            },
+            {
               path: "new9",
               name: "new9",
               component: New9,
@@ -131,7 +139,6 @@ export default new Router({
           name: "aboutus",
           component: Aboutus,
         },
-        
       ],
     },
     {
@@ -251,6 +258,63 @@ export default new Router({
           name: "Form3",
           component: Form3,
         },
+      ],
+    },
+    {
+      path: "/product",
+      name: "Product",
+      component: Homepage,
+      children: [
+        {
+          path: "tufton",
+          name: "Tufton",
+          component: Tufton,
+        },
+        {
+          path: "tuftonbronzeblack",
+          name: "Tuftonblack",
+          component: Tuftonblack,
+        },
+        {
+          path: "embertonblack",
+          name: "Embertonblack",
+          component: Embertonblack,
+        },
+        {
+          path: "embertonforest",
+          name: "Embertonforest",
+          component: Embertonforest,
+        },
+        {
+          path: "embertoncream",
+          name: "Embertoncream",
+          component: Embertoncream,
+        },
+        {
+          path: "emberton",
+          name: "Emberton",
+          component: Emberton,
+        },
+        // {
+        //   path: "embertonforest",
+        //   name: "Embertonforest",
+        //   component: Embertonforest,
+        // },
+        // {
+        //   path: "embertonforest",
+        //   name: "Embertonforest",
+        //   component: Embertonforest,
+        // },
+        // {
+        //   path: "embertonforest",
+        //   name: "Embertonforest",
+        //   component: Embertonforest,
+        // },
+        // {
+        //   path: "embertonforest",
+        //   name: "Embertonforest",
+        //   component: Embertonforest,
+        // },
       ],
     },
   ],

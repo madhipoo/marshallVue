@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.3/css/modal-video.min.css">
+    <!-- <link rel="stylesheet" href="https://http://www.marshallheadphones.com.tw/assets/plugin/modal-video/css/lightbox.css"> -->
+    <title>Marshall Taiwan | MONITOR II A.N.C.</title>
+</head>
+<style type="text/css">
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap);
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    /*header-start*/
+    
+    .main-header {
+        position: fixed;
+        background-color: rgb(0, 0, 0, .2);
+        width: 100%;
+        height: 100px;
+        padding: 0 20px;
+        color: #fff;
+        top: 0;
+        transition: top .3s;
+        box-sizing: border-box;
+        transition: top .4s ease-in-out;
+        box-shadow: 0 0 8px rgba(134, 57, 57, 0.2);
+        z-index: 2;
+    }
+    
+    .hideUp .main-header {
+        top: -100px;
+    }
+    
+    .main-header .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+    }
+    
+    .logo {
+        float: left;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    
+    .logo img {
+        width: 150px;
+        height: 100px;
+        vertical-align: middle;
+    }
+    
+    .menu {
+        float: right;
+        line-height: 100px;
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .menu a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+        transform: translateY(0);
+        transition: .3s;
+    }
+    
+    .menu a::before {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #fff;
+        left: 50%;
+        right: 50%;
+        bottom: 25px;
+        color: #fff;
+        top: 0;
+        transition: .3s;
+    }
+    
+    .menu a:hover::before {
+        left: 0;
+        right: 0;
+    }
+    
+    .menu a:hover {
+        transform: translateY(-5px);
+    }
+    
+    .show_menu_btn {
+        float: right;
+        margin-right: 50px;
+    }
+    
+    .show_menu_btn i {
+        line-height: 100px;
+    }
+    
+    .show_menu_btn,
+    .hide_menu_btn {
+        transition: color .4s;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .menu a:hover,
+    .show_menu_btn:hover,
+    .hide_menu_btn:hover {
+        color: #ecea52;
+    }
+    
+    .main-header .header-search {
+        display: inline-block;
+    }
+    
+    .main-header .header-search .search-item {
+        display: flex;
+    }
+    
+    .main-header .header-search button,
+    .main-header .header-search input {
+        border: none;
+        background-color: #fff;
+        padding: 5px 10px;
+    }
+    
+    .main-header .header-search button:focus,
+    .main-header .header-search input:focus {
+        outline: none;
+    }
+    
+    .main-header .header-search input {
+        border-radius: 200px 0 0 200px;
+    }
+    
+    .main-header .header-search button {
+        border-radius: 0 200px 200px 0;
+    }
+    
+    #header_check {
+        opacity: 0;
+    }
+    /*header-end*/
+    /*scrollanchor-start*/
+    
+    .scrollanchor {
+        background: url(./review-marshalls-monitor-ii-headphones-sound-great-and-look_91dn.jpg);
+        background-size: cover;
+        background-position: 0% 50%;
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+    }
+    
+    .scrollanchor .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 100px;
+    }
+    
+    .scrollanchor .container .row .col1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .scrollanchor .container .title {
+        position: relative;
+        top: -30px;
+    }
+    
+    .scrollanchor .container .title .maintitle p {
+        display: inline-block;
+        color: #fff;
+        background-color: #000;
+    }
+    
+    .scrollanchor .container .title .maintitle p:last-child {
+        color: #fff;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .scrollanchor .container .button {
+        position: relative;
+        bottom: -60px;
+        font-size: 36px;
+        color: #fff;
+        font-weight: 750;
+    }
+    
+    .scrollanchor .container .button .buynow {
+        color: #000;
+        font-weight: normal;
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        margin: 0 30px;
+        transition: .3s;
+        display: inline-block;
+    }
+    
+    .scrollanchor .container .button .buynow:hover {
+        color: #fff;
+        background-color: rgb(0, 0, 0, 0);
+    }
+    /*scrollanchor-end*/
+    /*productlist-start*/
+    
+    .productlist .product_menu {
+        text-align: center;
+        margin: auto;
+        height: 10vh;
+        position: relative;
+        background-color: #000;
+    }
+    
+    .productlist .product_menu .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .productlist .product_menu .container .product_title {
+        color: #fff;
+        position: relative;
+        padding-top: 3vh;
+    }
+    
+    .productlist .product_menu .container .product_title h5 {
+        display: inline-block;
+        font-size: 20px;
+    }
+    
+    .productlist .product_menu .container .product_title h5:last-child {
+        padding-left: 75px;
+    }
+    /*product detail1 start*/
+    
+    .product_detail {
+        background-image: radial-gradient(circle at 48% 47%, rgba(255, 255, 255, 0.5), rgba(7, 7, 7, 0.29)), radial-gradient(circle at 48% 43%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.08)), linear-gradient(to bottom, #d8d8d8, #d8d8d8);
+    }
+    
+    .product_detail .container {
+        width: 100%;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+    
+    .product_detail .container .row {
+        display: flex;
+        padding: 3rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .product_main {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .color_change {
+        text-align: center;
+        margin: 24px 0;
+    }
+    
+    .color-dot-wrapper {
+        border: 2px solid transparent;
+        border-radius: 100%;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        margin: 0 5px;
+    }
+    
+    .active-color {
+        border: 3px solid #aaa;
+    }
+    
+    .color-dot {
+        border: 2px solid #fff;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+    }
+    
+    .moreimg {
+        display: inline-block;
+        padding: 5px 8px;
+        margin-left: 15px;
+        border: 1px solid #000;
+        color: #000;
+        transition: .3s;
+        text-decoration: none;
+    }
+    
+    .moreimg:hover {
+        color: #fff;
+        background-color: #000;
+    }
+    
+    .des_block {
+        margin: 15px 0;
+        text-align: justify;
+    }
+    
+    .column2 .des_block {
+        margin-top: 90px;
+    }
+    
+    .des_block p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .des_block .des_content {
+        display: block;
+    }
+    
+    .d-md-none {
+        display: none;
+    }
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0, .8);
+    }
+    /* Modal Content */
+    
+    .modal .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+    }
+    /* The Close Button */
+    
+    .modal .close {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    
+    .modal .close:hover {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .modal .modal-content .mySlides {
+        display: none;
+    }
+    /* Next & previous buttons */
+    
+    .modal-content .prev,
+    .modal-content .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: #000;
+        font-weight: 900;
+        font-size: 20px;
+        transition: 0.6s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    
+    .modal-content .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .modal-content .prev:hover,
+    .modal-content .next:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .mySlides img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    /*product detail1 end*/
+    /*product detail2 start*/
+    
+    .product_detail2 {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .product_detail2 .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        /* padding: 0 15px; */
+    }
+    
+    .product_detail2 .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    }
+    
+    .col-md-10 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    
+    .col-sm-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .offset-md-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .product_detail2 img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+    }
+    
+    .product_detail2 h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-size: 700;
+    }
+    
+    .product_detail2 p {
+        text-align: center;
+        padding-bottom: 12px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    /*product detail2 end*/
+    /*productlist-end*/
+    /*video start*/
+    
+    section#video {
+        position: relative;
+    }
+    
+    section#video::before {
+        content: '';
+        background-image: linear-gradient(150deg, rgba(58, 186, 187, 0.2) 0%, transparent 100%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    section#video .video_thumb {
+        width: 100%;
+    }
+    
+    section#video .playbtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    section#video img {
+        vertical-align: middle;
+        border-style: none;
+    }
+    
+    #video .video a {
+        color: inherit;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: inherit;
+    }
+    /*video end*/
+    /*tech_detail-start*/
+    
+    #tech_detail {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    #tech_detail .container {
+        max-width: 1140px;
+        /* width: 100%; */
+        margin: 0 auto;
+        padding: 40px 10px;
+    }
+    
+    #tech_detail .container .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #tech_detail .container .row .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .tech_title {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 8px;
+        margin-right: 100px;
+        margin-top: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th {
+        width: 40%;
+        text-align: left;
+    }
+    
+    td {
+        width: 60%;
+        /* padding-right: 50px; */
+    }
+    
+    th,
+    td {
+        vertical-align: baseline;
+        font-weight: normal;
+        padding: 8px 0;
+    }
+    
+    #twobtn {
+        justify-content: center;
+    }
+    
+    #tech_detail .gonow {
+        background-color: #fff;
+        color: #000;
+        padding: 10px 40px;
+        font-weight: 700;
+        font-size: 20px;
+        transition: .3s;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    
+    #tech_detail .gonow:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+    
+    #twobtn a:last-child {
+        margin-left: 6%;
+    }
+    /*tech-detail-end*/
+    /*infomation-start*/
+    
+    .info {
+        color: #fff;
+        background-color: #000;
+        overflow: hidden;
+    }
+    
+    .info .container {
+        width: 100%;
+        max-width: 1140px;
+        padding: 50px 30px;
+        margin: 0 auto;
+    }
+    
+    .info .container .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .info .container .row h6 {
+        font-size: 16px;
+        padding-bottom: .6em;
+    }
+    
+    .info .container .row .col-6 {
+        flex: 0 0 16.6666667%;
+        max-width: 16.666667%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row a {
+        color: #fff;
+        text-decoration: none;
+        transition: color .2s;
+    }
+    
+    .info .container .row a:hover {
+        color: #aaa;
+    }
+    
+    .info .container .row .col-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row .col-12 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row .col-12 .product-info-list .info-product {
+        display: inline-block;
+        border: 2px solid #fff;
+        width: 85px;
+        height: 85px;
+        position: relative;
+        margin: 10px 5px;
+        box-sizing: border-box;
+    }
+    
+    .info .container .row .col-12 .product-info-list .info-product p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .info .container .row .col-4 .contact {
+        position: relative;
+        bottom: -65px;
+    }
+    
+    #speakerimg::before,
+    #headpkoneimg::before,
+    #accessoryimg::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    
+    #speakerimg:hover:before,
+    #headpkoneimg:hover::before,
+    #accessoryimg:hover::before {
+        opacity: 1;
+    }
+    
+    #speakerimg::before {
+        background-image: url(../../../../pic/配件1.png);
+    }
+    
+    #headpkoneimg::before {
+        background-image: url(../../../../pic/配件2.png);
+    }
+    /*infomation-end*/
+    /*footer-start*/
+    
+    .main-footer {
+        background: url('../../../../pic/footer1.jpg') center center/100%;
+        background-size: cover;
+        color: black;
+    }
+    
+    .main-footer .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+    
+    .main-footer .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 80px 0;
+    }
+    
+    .main-footer .container .row .footer-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .main-footer .container .row .footer-col .icon {
+        display: inline-block;
+        font-size: 40px;
+        margin: 0 10px;
+    }
+    
+    .main-footer .container .row .footer-col .icon i {
+        color: #000;
+    }
+    
+    .main-footer .container .row .footer-col .copyright {
+        line-height: 4;
+        text-align: right;
+    }
+    /*footer-end*/
+    
+    @media screen and (max-width: 1199px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 960px;
+        }
+    }
+    
+    @media screen and (max-width: 991px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 720px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .menu a {
+            font-size: 16px;
+        }
+        .main-header .header-search button,
+        .main-header .header-search input {
+            border: none;
+            background-color: #fff;
+            padding: 4px 5px;
+        }
+        .info .container .row .col-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .info .container .row .col-12 {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+        }
+        .info .container .row .col-4 .contact {
+            bottom: 0;
+            margin: 10px;
+        }
+        .info .container .row .col-4 .contact a {
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 540px;
+        }
+        .show_menu_btn,
+        .hide_menu_btn {
+            display: block;
+        }
+        .menu {
+            position: fixed;
+            width: 40%;
+            height: 50vh;
+            top: 0;
+            right: -100%;
+            background: #333;
+            text-align: center;
+            padding: 80px 0;
+            line-height: normal;
+            transition: .7s;
+        }
+        .menu a {
+            display: block;
+            padding: 20px 0;
+        }
+        .menu a::before {
+            display: none;
+        }
+        .hide_menu_btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+        .main-header .header-search {
+            margin: 10px auto 0;
+        }
+        #header_check:checked~.menu {
+            right: -20px;
+        }
+        .scrollanchor {
+            height: 85vh;
+        }
+        .scrollanchor .container .row .col1 {
+            top: 50%;
+            left: 30%;
+            transform: translate(-15%, -50%);
+        }
+        .scrollanchor .container .title .maintitle p {
+            font-size: 24px;
+        }
+        .scrollanchor .container .title .maintitle p:last-child {
+            font-size: 20px;
+        }
+        .scrollanchor .container .button {
+            font-size: 28px;
+        }
+        .productlist .product_menu {
+            height: 15vh;
+        }
+        .productlist .product_menu .container .product_title h5 {
+            display: block;
+            font-size: 18px;
+        }
+        .productlist .product_menu .container .product_title h5:last-child {
+            padding-left: 0;
+        }
+        .product_detail .container {
+            max-width: 540px;
+        }
+        .col-sm-4,
+        .col-md-4 {
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+        .order-md-1 {
+            order: 1;
+        }
+        .order-md-2 {
+            order: 2;
+        }
+        .order-md-3 {
+            order: 3;
+        }
+        .column2 .des_block {
+            margin-top: 0;
+        }
+        .d-md-none {
+            display: inline-block;
+            float: right;
+        }
+        .des_block .des_content {
+            display: none;
+        }
+        .product_detail2 .container .row {
+            justify-content: center;
+        }
+        .offset-md-1 {
+            margin-left: 0;
+        }
+        .product_detail2 h2 {
+            font-size: 20px;
+        }
+        .product_detail2 p {
+            font-size: 16px;
+        }
+        #tech_detail .container .row .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        #tech_detail .gonow {
+            margin-top: 16px;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+        #twobtn a:last-child {
+            margin-left: 4%;
+        }
+        .tech_title {
+            margin-right: 0px;
+        }
+        .info .container .row .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .info .container .row .col-12 {
+            margin: 10px;
+        }
+        .info .container .row .col-12,
+        .info .container .row .col-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .info .container .row .col-12 .product-info-list .info-product {
+            width: 100px;
+            height: 100px;
+        }
+        .info .container .row .col-4 .contact {
+            bottom: 0;
+            margin: 10px;
+        }
+        #speakerimg::before,
+        #headpkoneimg::before,
+        #accessoryimg::before {
+            opacity: 1;
+        }
+        .main-footer .container .row .footer-col {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        .main-footer .container .row .footer-col .copyright {
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: 575px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container {
+            max-width: 300px;
+        }
+        .menu{
+            width: 100%;
+            height: 35vh;
+            margin-right: 0px;
+        }
+        #header_check:checked~.menu {
+            right: 0px;
+        }
+        .scrollanchor .container .title .maintitle p {
+            font-size: 20px;
+        }
+        .scrollanchor .container .title .maintitle p:last-child {
+            font-size: 18px;
+        }
+        .scrollanchor .container .button {
+            font-size: 24px;
+        }
+        .scrollanchor .container .button .buynow {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .mySlides img,
+        .modal .modal-content {
+            width: 250px;
+            height: 250px;
+        }
+        .col-sm-6 {
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+            padding: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="main-header">
+        <div class="container">
+            <a href="../../Homepage.html" class="logo"><img src="../../../../pic/marshall.png" alt="logo"></a>
+
+            <input type="checkbox" id="header_check">
+            <label for="header_check" class="show_menu_btn"><i class="fa fa-bars"></i></label>
+            <ul class="menu">
+                <a href="../../knowus/news.html">News</a>
+                <a href="../../speakers.html">Speaker</a>
+                <a href="../../headphone.html">Headphones</a>
+                <div class="header-search">
+                    <form class="search-item">
+                        <input type="search" name="" id="">
+                        <button><i class="fa fa-search"></i></button>
+
+                    </form>
+                </div>
+
+                <label for="header_check" class="hide_menu_btn"><i class="fa fa-times"></i></label>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="scrollanchor">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <div class="title">
+                        <h1 class="maintitle">
+                            <p>MONITOR II A.N.C.</p><br>
+                            <p>SUPERIOR SIGNATURE SOUND.</p>
+                        </h1>
+                    </div>
+                    <p class="button">
+                        NTD $10,990<a href="https://www.urbanunits.com.tw/SalePage/Index/6216872" class="buynow">馬上選購</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <section class="productlist">
+        <div class="product_menu">
+            <div class="container">
+                <div class="product_title">
+                    <h5>MONITOR II A.N.C.</h5>
+                    <h5>NTD $10,990</h5>
+                </div>
+            </div>
+        </div>
+        <div class="product_detail">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-md-4 order-md-2 column2">
+                        <!-- .column1, .column2, .column3, .column4 為細節數量，定義底下.des_block的margin-top，總數最多為8，左右可分開設定。-->
+
+                    </div>
+                    <div class="col-md-4 order-md-1">
+                        <img class="product_main " src="./e1e4ce73-069e-46c8-8baa-b13c5f8c507a-hero_marshall_monitor II ANC_product 1.png" alt="">
+                        <div class="color_change">
+                            <span class="color-dot-wrapper active-color" data-item="1" data-src="./e1e4ce73-069e-46c8-8baa-b13c5f8c507a-hero_marshall_monitor II ANC_product 1.png">
+                                <span class="color-dot" style="background-color: #000"></span>
+                            </span>
+
+                            <a href="#" class="moreimg" onclick="openModal();">更多圖片</a>
+                        </div>
+                        <div class="des_block">
+                            <p>延續 MARSHALL 傳奇，MONITOR II A.N.C. 主動式抗噪藍牙耳機經典卻不失現代感，提供前所未有的高品質音效，採用主動式抗噪技術強化阻隔外界喧擾，讓你能持續專注在最重要的事情 – 音樂。</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 order-md-3 column2">
+
+                    </div>
+                    <div id="myModal" class="modal">
+                        <span class="close " onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+
+                            <div class="mySlides">
+                                <img src="./e1e4ce73-069e-46c8-8baa-b13c5f8c507a-hero_marshall_monitor II ANC_product 1.png">
+                            </div>
+
+                            <div class="mySlides">
+                                <img src="./5dd117ad-6190-4e8f-9e8c-7b4613ab0280-hero_marshall_monitor II ANC_product 2.png">
+                            </div>
+
+                            <div class="mySlides">
+                                <img src="./612db84b-e70f-4a04-9cbd-7bee74755270-hero_marshall_monitor II ANC_product 3.png">
+                            </div>
+
+                            <div class="mySlides">
+                                <img src="./ae0c2a7b-526f-4982-9201-20c760cb8ac6-hero_marshall_monitor II ANC_product 4.png">
+                            </div>
+
+
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="product_detail2">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./9828cbaa-b578-4f8d-a461-39a827840030-Monitor-II-ANC-USP-1.png" alt=""></p>
+                        <h2>主動式抗噪</h2>
+                        <p>Monitor II A.N.C. 採用主動抗噪技術，即時校正音訊並有效阻隔你不想聽到的環境噪音，讓你能持續專注在最重要的事情 – 音樂。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./94b89dbe-7f79-40eb-9f56-727c800bf5a6-hero_marshall_monitor II ANC_ICONIC SOUND.png" alt=""></p>
+                        <h2>經典聲效</h2>
+                        <p>你從未體驗過的卓越音效，Monitor II A.N.C. 搭載 40 mm 驅動單體，創造 Marshall 獨有的經典聲效。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p><img src="./657bef3b-783c-4773-9178-c7324c502e92-3-col-Icon-Monitor-II-ANC-Desktop-1.png" alt=""></p>
+                        <h2>30小時無線播放</h2>
+                        <p>Monitor II A.N.C. 在抗噪模式下仍提供長達30小時無線播放續航力。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p><img src="./0c1c1a03-39e4-4c12-869f-e510a1775245-3-col-Icon-Monitor-II-ANC-Desktop-2.png" alt=""></p>
+                        <h2>人體工學，經典設計</h2>
+                        <p>Monitor II A.N.C. 延續 Marshall 經典外型，具備人體工學設計，提供整日舒適配戴。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p><img src="./86516b9f-a6d8-42dd-aa67-d6fe3db028df-3-col-Icon-Monitor-II-ANC-Desktop-3.png" alt=""></p>
+                        <h2>語音助理</h2>
+                        <p> 讓 Google 助理幫你一把，享受娛樂、與親友保持聯繫、獲得資訊，以及管理日程，完全都不需要使用到手機，透過APP設定，長按耳機上的「M 按鈕」，就能開口說出指令。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./37b3ccdf-0d93-4596-a7e6-45febb5429d7-marshall_monitor II ANC_COLLAPSIBLE DESIGN.png" alt=""></p>
+                        <h2>折疊設計</h2>
+                        <p>採用折疊設計，Monitor II A.N.C. 致力成為極致旅行夥伴，精巧身型與折疊收納，再長的旅程都經得起考驗。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p><img src="./64b1c36b-306f-4560-b79c-b3eebea20b5b-3-col-Icon-Monitor-II-ANC-Controll-knob-Desktop.png" alt=""></p>
+                        <h2>五向控制鈕</h2>
+                        <p>播放、暫停與操控音樂，調整音量與通話功能。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p><img src="./dd52de75-aa6b-4bd9-89fe-7b41be22be97-3-col-Icon-Monitor-II-ANC-ANC-button-Desktop.png" alt=""></p>
+                        <h2>ANC 按鈕</h2>
+                        <p>切換三種抗噪模式，開啟、環境音(通透)與關閉。</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p><img src="./70924a7a-3a72-4101-8b9e-f75954c3e3a0-3-col-Icon-Monitor-II-ANC-M-button-Desktop.png" alt=""></p>
+                        <h2>M 按鈕</h2>
+                        <p>切換三種預設等化器模式或啟動 Google 語音助理。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./1de5d726-99af-4f8f-a603-8ec787c02e5c-marshall_monitor II ANC_TRAVEL KIT.png" alt=""></p>
+                        <h2>旅行收納袋</h2>
+                        <p>為短暫或長遠旅行打造，內附 USB-C 充電線、3.5 mm 音源線與帆布袋，輕鬆收納與攜帶。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="video">
+        <div class="video">
+            <a href="" class="js-modal-btn" data-video-id="8hpCHHPJ69A">
+                <img class="video_thumb" src="./9d49436d-bc62-4b02-9ada-917f7de2366e-MonitorIIANC_YouTube.jpg">
+                <img src="../../../../pic/playbtn.png" alt="" class="playbtn">
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="tech_detail">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tech_block">
+                        <p class="tech_title">產品規格</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>驅動單體</th>
+                                    <td>40mm</td>
+                                </tr>
+                                <tr>
+                                    <th>響應頻率</th>
+                                    <td>20 Hz-20kHz</td>
+                                </tr>
+                                <tr>
+                                    <th>靈敏度</th>
+                                    <td>96 dB SPL</td>
+                                </tr>
+                                <tr>
+                                    <th>阻抗</th>
+                                    <td>32 Ω</td>
+                                </tr>
+                                <tr>
+                                    <th>續航力</th>
+                                    <td>30小時(抗噪模式)，45小時(藍牙模式)</td>
+                                </tr>
+                                <tr>
+                                    <th>充電時間</th>
+                                    <td>2小時，15分鐘快充提供近5小時電力</td>
+                                </tr>
+                                <tr>
+                                    <th>重量</th>
+                                    <td>320g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tech_block">
+                        <p class="tech_title">操控與連接</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>連接方式</th>
+                                    <td>藍牙 5.0、3.5mm 音源線</td>
+                                </tr>
+                                <tr>
+                                    <th>內建麥克風&操控鈕</th>
+                                    <td>是</td>
+                                </tr>
+                                <tr>
+                                    <th>語音助理</th>
+                                    <td>Google Assistant</td>
+                                </tr>
+                                <tr>
+                                    <th>APP 應用程式</th>
+                                    <td>Marshall Bluetooth app、Google Assistant app</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="tech_block">
+                        <p class="tech_title">包裝內容物</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Monitor II A.N.C. 主動式抗噪耳機 </th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>雙頭3.5mm音源線</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>USB-C 充電線</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>帆布收納袋</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>說明手冊</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row " id="twobtn">
+                <a class="gonow" href="https://www.urbanunits.com.tw/SalePage/Index/6216872">馬上選購</a>
+                <a class="gonow" href="../../headphone.html">回產品列表</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h6 class="info-title">認識我們</h6>
+                    <ul>
+                        <li>
+                            <a href="../../knowus/aboutus.html">關於我們</a>
+                        </li>
+                        <li>
+                            <a href="../../knowus/news.html">最新消息</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h6 class="info-title">產品支援</h6>
+                    <ul>
+                        <li>
+                            <a href="../../Repair/ques.html">常見問題</a>
+                        </li>
+                        <li>
+                            <a href="../../Repair/repair.html">維護保固</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h6 class="info-title">產品</h6>
+                    <div class="product-info-list">
+                        <a href="../../speakers.html">
+                            <div class="info-product" id="speakerimg">
+                                <p>喇叭</p>
+                            </div>
+                        </a>
+                        <a href="../../headphone.html">
+                            <div class="info-product" id="headpkoneimg">
+                                <p>耳機</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="contact">
+                        <a href="https://www.google.com.tw/maps/place/110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%9F%BA%E9%9A%86%E8%B7%AF%E4%B8%80%E6%AE%B5141%E8%99%9F%E6%A8%93%E4%B9%8B6/@25.0429861,121.5637632,17z/data=!3m1!4b1!4m5!3m4!1s0x3442abbc1f24d8eb:0x941ea55b76f2ee82!8m2!3d25.0429861!4d121.5659519"
+                            target="_blank">
+                            百滋國際股份有限公司
+                            <br>
+                            台北市信義區基隆路一段141號4樓</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="contact">
+                        <p>(02)5024-8465</p>
+                        <p>marshall@personal.com.tw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="icon">
+                        <a href="https://www.facebook.com/TWMRSL/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.instagram.com/marshall_pezcrown_taiwan/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <p class="copyright">
+                        Copyright &copy;2021 百滋國際股份有限公司
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' type="text/javascript"></script>
+    <script type="text/javascript">
+        (function() {
+            var bodyClass = document.body.classList
+
+            window.addEventListener('scroll', function() {
+                var st = this.scrollY;
+
+                if (st < 200) {
+                    bodyClass.remove('hideUp');
+                } else {
+                    bodyClass.add('hideUp');
+                }
+            });
+        })()
+    </script>
+    <script src="../../../../js/jquery-modal-video.js"></script>
+    <script>
+        (function() {
+            $(".js-modal-btn").modalVideo();
+        })()
+    </script>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+        }
+    </script>
+    <script>
+        if ($(window).width() < 768) {
+            $(".product_detail .des_block").click(function() {
+                $(".product_detail .des_content").css("display", "none");
+                $(this).children(".des_content").css("display", "block");
+                $(".product_detail .des_block").find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+                $(this).find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+            });
+        }
+        $(".color-dot-wrapper").click(function() {
+            $(".color-dot-wrapper").removeClass("active-color");
+            $(this).addClass("active-color");
+            var active_item = $(this).data("item");
+            $(".product_main").attr("src", $(this).data("src"));
+        })
+    </script>
+</body>
+
+</html>

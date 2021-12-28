@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/modal-video@2.4.3/css/modal-video.min.css">
+    <!-- <link rel="stylesheet" href="https://http://www.marshallheadphones.com.tw/assets/plugin/modal-video/css/lightbox.css"> -->
+    <title>Marshall Taiwan | MODE EQ </title>
+</head>
+<style type="text/css">
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap);
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    /*header-start*/
+    
+    .main-header {
+        position: fixed;
+        background-color: rgb(0, 0, 0, .2);
+        width: 100%;
+        height: 100px;
+        padding: 0 20px;
+        color: #fff;
+        top: 0;
+        transition: top .3s;
+        box-sizing: border-box;
+        transition: top .4s ease-in-out;
+        box-shadow: 0 0 8px rgba(134, 57, 57, 0.2);
+        z-index: 2;
+    }
+    
+    .hideUp .main-header {
+        top: -100px;
+    }
+    
+    .main-header .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+    }
+    
+    .logo {
+        float: left;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    
+    .logo img {
+        width: 150px;
+        height: 100px;
+        vertical-align: middle;
+    }
+    
+    .menu {
+        float: right;
+        line-height: 100px;
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .menu a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        padding: 0 20px;
+        transform: translateY(0);
+        transition: .3s;
+    }
+    
+    .menu a::before {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #fff;
+        left: 50%;
+        right: 50%;
+        bottom: 25px;
+        color: #fff;
+        top: 0;
+        transition: .3s;
+    }
+    
+    .menu a:hover::before {
+        left: 0;
+        right: 0;
+    }
+    
+    .menu a:hover {
+        transform: translateY(-5px);
+    }
+    
+    .show_menu_btn {
+        float: right;
+        margin-right: 50px;
+    }
+    
+    .show_menu_btn i {
+        line-height: 100px;
+    }
+    
+    .show_menu_btn,
+    .hide_menu_btn {
+        transition: color .4s;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .menu a:hover,
+    .show_menu_btn:hover,
+    .hide_menu_btn:hover {
+        color: #ecea52;
+    }
+    
+    .main-header .header-search {
+        display: inline-block;
+    }
+    
+    .main-header .header-search .search-item {
+        display: flex;
+    }
+    
+    .main-header .header-search button,
+    .main-header .header-search input {
+        border: none;
+        background-color: #fff;
+        padding: 5px 10px;
+    }
+    
+    .main-header .header-search button:focus,
+    .main-header .header-search input:focus {
+        outline: none;
+    }
+    
+    .main-header .header-search input {
+        border-radius: 200px 0 0 200px;
+    }
+    
+    .main-header .header-search button {
+        border-radius: 0 200px 200px 0;
+    }
+    
+    #header_check {
+        opacity: 0;
+    }
+    /*header-end*/
+    /*scrollanchor-start*/
+    
+    .scrollanchor {
+        background: url(./maxresdefault.jpg);
+        background-size: cover;
+        background-position: 10% 50%;
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .scrollanchor .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 100px;
+    }
+    
+    .scrollanchor .container .row .col1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .scrollanchor .container .title {
+        position: relative;
+        top: -30px;
+    }
+    
+    .scrollanchor .container .title .maintitle p {
+        display: inline-block;
+        color: #fff;
+        background-color: #000;
+    }
+    
+    .scrollanchor .container .button {
+        position: relative;
+        bottom: -60px;
+        font-size: 36px;
+        color: #fff;
+        font-weight: 750;
+    }
+    
+    .scrollanchor .container .button .buynow {
+        color: #000;
+        font-weight: normal;
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        margin: 0 30px;
+        transition: .3s;
+        display: inline-block;
+    }
+    
+    .scrollanchor .container .button .buynow:hover {
+        color: #fff;
+        background-color: rgb(0, 0, 0, 0);
+    }
+    /*scrollanchor-end*/
+    /*productlist-start*/
+    
+    .productlist .product_menu {
+        text-align: center;
+        margin: auto;
+        height: 10vh;
+        position: relative;
+        background-color: #000;
+    }
+    
+    .productlist .product_menu .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .productlist .product_menu .container .product_title {
+        color: #fff;
+        position: relative;
+        padding-top: 3vh;
+    }
+    
+    .productlist .product_menu .container .product_title h5 {
+        display: inline-block;
+        font-size: 20px;
+    }
+    
+    .productlist .product_menu .container .product_title h5:last-child {
+        padding-left: 75px;
+    }
+    /*product detail1 start*/
+    
+    .product_detail {
+        background-image: radial-gradient(circle at 48% 47%, rgba(255, 255, 255, 0.5), rgba(7, 7, 7, 0.29)), radial-gradient(circle at 48% 43%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.08)), linear-gradient(to bottom, #d8d8d8, #d8d8d8);
+    }
+    
+    .product_detail .container {
+        width: 100%;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+    
+    .product_detail .container .row {
+        display: flex;
+        padding: 3rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .product_main {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .color_change {
+        text-align: center;
+        margin: 24px 0;
+    }
+    
+    .color-dot-wrapper {
+        border: 2px solid transparent;
+        border-radius: 100%;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        margin: 0 5px;
+    }
+    
+    .active-color {
+        border: 3px solid #aaa;
+    }
+    
+    .color-dot {
+        border: 2px solid #fff;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+    }
+    
+    .moreimg {
+        display: inline-block;
+        padding: 5px 8px;
+        margin-left: 15px;
+        border: 1px solid #000;
+        color: #000;
+        transition: .3s;
+        text-decoration: none;
+    }
+    
+    .moreimg:hover {
+        color: #fff;
+        background-color: #000;
+    }
+    
+    .des_block {
+        margin: 15px 0;
+        text-align: justify;
+    }
+    
+    .column2 .des_block {
+        margin-top: 90px;
+    }
+    
+    .des_block p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .des_block .des_content {
+        display: block;
+    }
+    
+    .d-md-none {
+        display: none;
+    }
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0, .8);
+    }
+    /* Modal Content */
+    
+    .modal .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+    }
+    /* The Close Button */
+    
+    .modal .close {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 35px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    
+    .modal .close:hover {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .modal .modal-content .mySlides {
+        display: none;
+    }
+    /* Next & previous buttons */
+    
+    .modal-content .prev,
+    .modal-content .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: #000;
+        font-weight: 900;
+        font-size: 20px;
+        transition: 0.6s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    
+    .modal-content .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .modal-content .prev:hover,
+    .modal-content .next:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .mySlides img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    /*product detail1 end*/
+    /*product detail2 start*/
+    
+    .product_detail2 {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .product_detail2 .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        /* padding: 0 15px; */
+    }
+    
+    .product_detail2 .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    }
+    
+    .col-md-10 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .offset-md-1 {
+        margin-left: 8.333333%;
+    }
+    
+    .product_detail2 img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+    }
+    
+    .product_detail2 h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-size: 700;
+    }
+    
+    .product_detail2 p {
+        text-align: center;
+        padding-bottom: 12px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    /*product detail2 end*/
+    /*productlist-end*/
+    /*tech_detail-start*/
+    
+    #tech_detail {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    #tech_detail .container {
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    
+    #tech_detail .container .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #tech_detail .container .row .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .tech_title {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 8px;
+        margin-right: 100px;
+        margin-top: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: separate;
+    }
+    
+    th {
+        width: 40%;
+        text-align: left;
+    }
+    
+    td {
+        width: 60%;
+        /* padding-right: 50px; */
+    }
+    
+    th,
+    td {
+        vertical-align: baseline;
+        font-weight: normal;
+        padding: 8px 0;
+    }
+    
+    #twobtn {
+        justify-content: center;
+    }
+    
+    #tech_detail .gonow {
+        background-color: #fff;
+        color: #000;
+        padding: 10px 40px;
+        font-weight: 700;
+        font-size: 20px;
+        transition: .3s;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    
+    #tech_detail .gonow:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+    
+    #twobtn a:last-child {
+        margin-left: 6%;
+    }
+    /*tech-detail-end*/
+    /*infomation-start*/
+    
+    .info {
+        color: #fff;
+        background-color: #000;
+        overflow: hidden;
+    }
+    
+    .info .container {
+        width: 100%;
+        max-width: 1140px;
+        padding: 50px 30px;
+        margin: 0 auto;
+    }
+    
+    .info .container .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .info .container .row h6 {
+        font-size: 16px;
+        padding-bottom: .6em;
+    }
+    
+    .info .container .row .col-6 {
+        flex: 0 0 16.6666667%;
+        max-width: 16.666667%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row a {
+        color: #fff;
+        text-decoration: none;
+        transition: color .2s;
+    }
+    
+    .info .container .row a:hover {
+        color: #aaa;
+    }
+    
+    .info .container .row .col-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row .col-12 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .info .container .row .col-12 .product-info-list .info-product {
+        display: inline-block;
+        border: 2px solid #fff;
+        width: 85px;
+        height: 85px;
+        position: relative;
+        margin: 10px 5px;
+        box-sizing: border-box;
+    }
+    
+    .info .container .row .col-12 .product-info-list .info-product p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .info .container .row .col-4 .contact {
+        position: relative;
+        bottom: -65px;
+    }
+    
+    #speakerimg::before,
+    #headpkoneimg::before,
+    #accessoryimg::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    
+    #speakerimg:hover:before,
+    #headpkoneimg:hover::before,
+    #accessoryimg:hover::before {
+        opacity: 1;
+    }
+    
+    #speakerimg::before {
+        background-image: url(../../../../pic/配件1.png);
+    }
+    
+    #headpkoneimg::before {
+        background-image: url(../../../../pic/配件2.png);
+    }
+    /*infomation-end*/
+    /*footer-start*/
+    
+    .main-footer {
+        background: url('../../../../pic/footer1.jpg') center center/100%;
+        background-size: cover;
+        color: black;
+    }
+    
+    .main-footer .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+    
+    .main-footer .container .row {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 80px 0;
+    }
+    
+    .main-footer .container .row .footer-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .main-footer .container .row .footer-col .icon {
+        display: inline-block;
+        font-size: 40px;
+        margin: 0 10px;
+    }
+    
+    .main-footer .container .row .footer-col .icon i {
+        color: #000;
+    }
+    
+    .main-footer .container .row .footer-col .copyright {
+        line-height: 4;
+        text-align: right;
+    }
+    /*footer-end*/
+    
+    @media screen and (max-width: 1199px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 960px;
+        }
+    }
+    
+    @media screen and (max-width: 991px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 720px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .menu a {
+            font-size: 16px;
+        }
+        .main-header .header-search button,
+        .main-header .header-search input {
+            border: none;
+            background-color: #fff;
+            padding: 4px 5px;
+        }
+        .info .container .row .col-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .info .container .row .col-12 {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+        }
+        .info .container .row .col-4 .contact {
+            bottom: 0;
+            margin: 10px;
+        }
+        .info .container .row .col-4 .contact a {
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 540px;
+        }
+        .show_menu_btn,
+        .hide_menu_btn {
+            display: block;
+        }
+        .menu {
+            position: fixed;
+            width: 40%;
+            height: 50vh;
+            top: 0;
+            right: -100%;
+            background: #333;
+            text-align: center;
+            padding: 80px 0;
+            line-height: normal;
+            transition: .7s;
+        }
+        .menu a {
+            display: block;
+            padding: 20px 0;
+        }
+        .menu a::before {
+            display: none;
+        }
+        .hide_menu_btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+        .main-header .header-search {
+            margin: 10px auto 0;
+        }
+        #header_check:checked~.menu {
+            right: -20px;
+        }
+        .scrollanchor {
+            height: 85vh;
+        }
+        .scrollanchor .container .row .col1 {
+            top: 50%;
+            left: 30%;
+            transform: translate(-15%, -50%);
+        }
+        .scrollanchor .container .title .maintitle p {
+            font-size: 24px;
+        }
+        .scrollanchor .container .button {
+            font-size: 28px;
+        }
+        .productlist .product_menu {
+            height: 15vh;
+        }
+        .productlist .product_menu .container .product_title h5 {
+            display: block;
+            font-size: 18px;
+        }
+        .productlist .product_menu .container .product_title h5:last-child {
+            padding-left: 0;
+        }
+        .product_detail .container {
+            max-width: 540px;
+        }
+        .col-sm-6,
+        .col-md-4 {
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+        }
+        .order-md-1 {
+            order: 1;
+        }
+        .order-md-2 {
+            order: 2;
+        }
+        .order-md-3 {
+            order: 3;
+        }
+        .column2 .des_block {
+            margin-top: 0;
+        }
+        .d-md-none {
+            display: inline-block;
+            float: right;
+        }
+        .des_block .des_content {
+            display: none;
+        }
+        .product_detail2 .container .row {
+            justify-content: center;
+        }
+        .offset-md-1 {
+            margin-left: 0;
+        }
+        .product_detail2 h2 {
+            font-size: 20px;
+        }
+        .product_detail2 p {
+            font-size: 16px;
+        }
+        #tech_detail .container .row .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        #tech_detail .gonow {
+            margin-top: 16px;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+        #twobtn a:last-child {
+            margin-left: 4%;
+        }
+        .tech_title {
+            margin-right: 0px;
+        }
+        .info .container .row .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .info .container .row .col-12 {
+            margin: 10px;
+        }
+        .info .container .row .col-12,
+        .info .container .row .col-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .info .container .row .col-12 .product-info-list .info-product {
+            width: 100px;
+            height: 100px;
+        }
+        .info .container .row .col-4 .contact {
+            bottom: 0;
+            margin: 10px;
+        }
+        #speakerimg::before,
+        #headpkoneimg::before,
+        #accessoryimg::before {
+            opacity: 1;
+        }
+        .main-footer .container .row .footer-col {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        .main-footer .container .row .footer-col .copyright {
+            text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: 575px) {
+        .container,
+        .product_detail .container,
+        .product_detail2 .container,
+        #tech_detail .container {
+            max-width: 300px;
+        }
+        .menu{
+            width: 100%;
+            height: 35vh;
+            margin-right: 0px;
+        }
+        #header_check:checked~.menu {
+            right: 0px;
+        }
+        .scrollanchor .container .title .maintitle p {
+            font-size: 20px;
+        }
+        .scrollanchor .container .button {
+            font-size: 24px;
+        }
+        .scrollanchor .container .button .buynow {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .mySlides img,
+        .modal .modal-content {
+            width: 250px;
+            height: 250px;
+        }
+        .col-sm-6 {
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+            padding: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="main-header">
+        <div class="container">
+            <a href="../../Homepage.html" class="logo"><img src="../../../../pic/marshall.png" alt="logo"></a>
+
+            <input type="checkbox" id="header_check">
+            <label for="header_check" class="show_menu_btn"><i class="fa fa-bars"></i></label>
+            <ul class="menu">
+                <a href="../../knowus/news.html">News</a>
+                <a href="../../speakers.html">Speaker</a>
+                <a href="../../headphone.html">Headphones</a>
+                <div class="header-search">
+                    <form class="search-item">
+                        <input type="search" name="" id="">
+                        <button><i class="fa fa-search"></i></button>
+
+                    </form>
+                </div>
+
+                <label for="header_check" class="hide_menu_btn"><i class="fa fa-times"></i></label>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="scrollanchor">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <div class="title">
+                        <h1 class="maintitle">
+                            <p>MODE EQ</p>
+                        </h1>
+                    </div>
+                    <p class="button">
+                        NTD $3,190<a href="https://www.urbanunits.com.tw/SalePage/Index/3306159?cid=167740" class="buynow">馬上選購</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <section class="productlist">
+        <div class="product_menu">
+            <div class="container">
+                <div class="product_title">
+                    <h5>MODE EQ</h5>
+                    <h5>NTD $3,190</h5>
+                </div>
+            </div>
+        </div>
+        <div class="product_detail">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-md-4 order-md-2 column2">
+                        <!-- .column1, .column2, .column3, .column4 為細節數量，定義底下.des_block的margin-top，總數最多為8，左右可分開設定。-->
+
+                    </div>
+                    <div class="col-md-4 order-md-1">
+                        <img class="product_main " src="./f3972b14-1290-4035-84bc-4f7a7b394a96-pos-marshall-mode-eq-01.png" alt="">
+                        <div class="color_change">
+                            <span class="color-dot-wrapper active-color" data-item="1" data-src="./f3972b14-1290-4035-84bc-4f7a7b394a96-pos-marshall-mode-eq-01.png">
+                                <span class="color-dot"></span>
+                            </span>
+                            <span class="color-dot-wrapper " data-item="2" data-src="./c23e6f61-803d-43e6-a2c9-92e4ff520238-pos-marshall-mode-eq-02.png">
+                                <span class="color-dot"></span>
+                            </span>
+                            <span class="color-dot-wrapper " data-item="3" data-src="./6d166097-ae9b-4dc7-92ae-733a0ec028ee-pos-marshall-mode-eq-03.png">
+                                <span class="color-dot"></span>
+                            </span>
+
+
+                            <a href="#" class="moreimg" onclick="openModal();">更多圖片</a>
+                        </div>
+                        <div class="des_block">
+                            <p>Marshall 首款入耳式耳機，MODE EQ 極小的體積，依然能傳出巨大清脆的聲響，客製化驅動單體，同時提供高輸出低失真的優質美聲，獨特的入耳式設計，讓 MODE EQ 能牢靠又舒適地配戴。</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 order-md-3 column2">
+
+                    </div>
+                    <div id="myModal" class="modal">
+                        <span class="close " onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+
+                            <div class="mySlides">
+                                <img src="./f3972b14-1290-4035-84bc-4f7a7b394a96-pos-marshall-mode-eq-01.png">
+                            </div>
+
+                            <div class="mySlides">
+                                <img src="./c23e6f61-803d-43e6-a2c9-92e4ff520238-pos-marshall-mode-eq-02.png">
+                            </div>
+
+                            <div class="mySlides">
+                                <img src="./6d166097-ae9b-4dc7-92ae-733a0ec028ee-pos-marshall-mode-eq-03.png">
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="product_detail2">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./284495fb-f234-44cf-99c2-479d4f065839-marshall-mode-eq-usp1-Desktop_2@1,41x.png" alt=""></p>
+                        <h2>等化器(EQ)調節</h2>
+                        <p>MODE EQ在線控上多了等化器(EQ)調節開關，開啟後能增強中低音頻，讓使用者可以在兩種模式中選擇自己想要的聲音</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./038ac0c5-74be-4599-ad70-b42d881d2cc8-mode-eq-內容2.png" alt=""></p>
+                        <h2>輕巧 重擊</h2>
+                        <p>極小的體積，依然能傳遞出巨大清脆的聲響</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 content_p">
+                        <p><img src="./90efd259-aa74-4759-8e79-5cc41b644fbc-mode-eq-內容3.png" alt=""></p>
+                        <h2>經典 MARSHALL 設計</h2>
+                        <p>線控刻上經典 Marshall 手寫logo，耳機上則有具有代表性的大寫 M</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><img src="./1e23de3c-576b-44f5-ae0a-5e57d0041486-mode-eq-內容4.png" alt=""></p>
+                        <h2>內建麥克風&線控</h2>
+                        <p>接聽通話、調整音量大小、選曲等都能透過線控上的金屬按鈕搞定</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><img src="./9eec0ef3-9dca-461c-b32c-537bf7789dcb-mode-eq-內容5.png" alt=""></p>
+                        <h2>內附不同尺寸耳塞</h2>
+                        <p>MODE EQ 內附四種不同大小耳塞，確保每個人的耳朵都能舒適配戴</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="tech_detail">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tech_block">
+                        <p class="tech_title">產品規格</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>驅動單體</th>
+                                    <td>9mm</td>
+                                </tr>
+                                <tr>
+                                    <th>阻抗</th>
+                                    <td>18 Ω</td>
+                                </tr>
+                                <tr>
+                                    <th>響應效率</th>
+                                    <td>20Hz-20kHz</td>
+                                </tr>
+                                <tr>
+                                    <th>靈敏度</th>
+                                    <td>100 dB SPL</td>
+                                </tr>
+                                <tr>
+                                    <th>重量</th>
+                                    <td>20g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tech_block">
+                        <p class="tech_title">操控與連接</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>內建麥克風&操控鈕</th>
+                                    <td>是</td>
+                                </tr>
+                                <tr>
+                                    <th>EQ鈕(低音增強)</th>
+                                    <td>有(On/Off)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="tech_block">
+                        <p class="tech_title">包裝內容物</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>MODE EQ 耳道式耳機</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>替換耳塞</th>
+                                    <td>S/M/L/XL</td>
+                                </tr>
+                                <tr>
+                                    <th>說明手冊</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row " id="twobtn">
+                <a class="gonow" href="https://www.urbanunits.com.tw/SalePage/Index/3306159?cid=167740">馬上選購</a>
+                <a class="gonow" href="../../headphone.html">回產品列表</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h6 class="info-title">認識我們</h6>
+                    <ul>
+                        <li>
+                            <a href="../../knowus/aboutus.html">關於我們</a>
+                        </li>
+                        <li>
+                            <a href="../../knowus/news.html">最新消息</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h6 class="info-title">產品支援</h6>
+                    <ul>
+                        <li>
+                            <a href="../../Repair/ques.html">常見問題</a>
+                        </li>
+                        <li>
+                            <a href="../../Repair/repair.html">維護保固</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <h6 class="info-title">產品</h6>
+                    <div class="product-info-list">
+                        <a href="../../speakers.html">
+                            <div class="info-product" id="speakerimg">
+                                <p>喇叭</p>
+                            </div>
+                        </a>
+                        <a href="../../headphone.html">
+                            <div class="info-product" id="headpkoneimg">
+                                <p>耳機</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="contact">
+                        <a href="https://www.google.com.tw/maps/place/110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%9F%BA%E9%9A%86%E8%B7%AF%E4%B8%80%E6%AE%B5141%E8%99%9F%E6%A8%93%E4%B9%8B6/@25.0429861,121.5637632,17z/data=!3m1!4b1!4m5!3m4!1s0x3442abbc1f24d8eb:0x941ea55b76f2ee82!8m2!3d25.0429861!4d121.5659519"
+                            target="_blank">
+                            百滋國際股份有限公司
+                            <br>
+                            台北市信義區基隆路一段141號4樓</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="contact">
+                        <p>(02)5024-8465</p>
+                        <p>marshall@personal.com.tw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="icon">
+                        <a href="https://www.facebook.com/TWMRSL/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.instagram.com/marshall_pezcrown_taiwan/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <p class="copyright">
+                        Copyright &copy;2021 百滋國際股份有限公司
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' type="text/javascript"></script>
+    <script type="text/javascript">
+        (function() {
+            var bodyClass = document.body.classList
+
+            window.addEventListener('scroll', function() {
+                var st = this.scrollY;
+
+                if (st < 200) {
+                    bodyClass.remove('hideUp');
+                } else {
+                    bodyClass.add('hideUp');
+                }
+            });
+        })()
+    </script>
+    <script src="../../../../js/jquery-modal-video.js"></script>
+    <script>
+        (function() {
+            $(".js-modal-btn").modalVideo();
+        })()
+    </script>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+        }
+    </script>
+    <script>
+        if ($(window).width() < 768) {
+            $(".product_detail .des_block").click(function() {
+                $(".product_detail .des_content").css("display", "none");
+                $(this).children(".des_content").css("display", "block");
+                $(".product_detail .des_block").find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+                $(this).find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+            });
+        }
+        $(".color-dot-wrapper").click(function() {
+            $(".color-dot-wrapper").removeClass("active-color");
+            $(this).addClass("active-color");
+            var active_item = $(this).data("item");
+            $(".product_main").attr("src", $(this).data("src"));
+        })
+    </script>
+</body>
+
+</html>
