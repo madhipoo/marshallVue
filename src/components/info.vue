@@ -6,10 +6,10 @@
           <h6 class="info-title">認識我們</h6>
           <ul>
             <li>
-              <router-link :to="'/news/aboutus'">關於我們</router-link>
+              <router-link :to="'/knowus/aboutus'">關於我們</router-link>
             </li>
             <li>
-              <router-link :to="'/news'">最新消息</router-link>
+              <router-link :to="'/knowus/allnews'">最新消息</router-link>
             </li>
           </ul>
         </div>

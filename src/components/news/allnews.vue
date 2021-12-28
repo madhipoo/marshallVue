@@ -1,16 +1,6 @@
 <template>
   <div>
-    <div class="scrollanchor">
-      <div class="container">
-        <div class="row">
-          <div class="kvtitle">
-            <h2 class="maintitle_content">最新消息</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <router-view></router-view>
-    <!-- <section id="news">
+    <section id="news">
       <div class="container py-5">
         <div class="row">
           <div class="col-md-4">
@@ -180,69 +170,102 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 <script>
 export default {
-  name: "News",
+  name: "Allnews",
   data() {
     return {};
   },
-};
+}
 </script>
-<style scoped lang="scss">
-/*scrollanchor-start*/
-.scrollanchor {
-  background-image: url("~@/assets/knowus/9-99766_marshall-silver-jubilee-original-vs-marshall-silver-jubilee.jpg");
-  background-size: cover;
-  background-position: 0 25%;
-  background-repeat: no-repeat;
-  position: relative;
+<style lang="scss" scoped>
+  /*news-start*/
+
+#news .container {
   width: 100%;
-  height: 35vh;
-  .container {
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      .kvtitle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        .maintitle_content {
-          color: #fff;
-          position: relative;
-          font-size: 36px;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 48px 0;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    .col-md-4 {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      position: relative;
+      .news_block {
+        border: 1px solid #979797;
+        padding: 15px;
+        margin-bottom: 30px;
+        a {
+          text-decoration: none;
+          .news_img {
+            max-height: 250px;
+            max-width: 100%;
+            margin: 0 auto;
+            height: auto;
+            vertical-align: middle;
+          }
+          .date {
+            margin: 8px 0;
+            display: block;
+            color: #999;
+          }
+          .news_title {
+            overflow: hidden;
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 2rem;
+            height: 4rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+          .news_content {
+            overflow: hidden;
+            color: #999;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5rem;
+            height: 4.5rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+          }
         }
-      }
-      .kvtitle::after {
-        content: "";
-        width: 350%;
-        height: 150%;
-        position: absolute;
-        z-index: -1;
-        background-color: #000;
-        transform: translate(-35%, -73%) rotate(7deg);
       }
     }
   }
 }
 
-/*scrollanchor-end*/
+/*news-end*/
+@media screen and (max-width: 1199px) {
+  #news .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #news .container {
+    max-width: 720px;
+  }
+}
 
 @media screen and (max-width: 767px) {
-  .scrollanchor .container{
+  #news .container {
     max-width: 540px;
   }
-  .scrollanchor .container .row .kvtitle::after {
-    width: 250%;
-    height: 160%;
-    transform: rotate(7deg) translate(-30%, -60%);
-  }
 
+  #news .container .row .col-md-4 {
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+    margin: 0 auto;
+  }
 }
 </style>

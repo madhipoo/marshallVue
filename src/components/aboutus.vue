@@ -31,11 +31,11 @@
           </div>
         </div>
         <div class="row">
-          <router-link :to="'speaker'" class="buynow">瀏覽音響全系列</router-link>
+          <router-link :to="'/speaker'" class="buynow">瀏覽音響全系列</router-link>
           
         </div>
         <div class="row">
-          <router-link :to="'headphone'" class="buynow">瀏覽耳機全系列</router-link>
+          <router-link :to="'/headphone'" class="buynow">瀏覽耳機全系列</router-link>
         </div>
       </div>
     </div>

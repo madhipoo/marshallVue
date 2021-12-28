@@ -2,9 +2,21 @@ import Vue from "vue";
 import Router from "vue-router";
 import Homepage from "@/components/Homepage";
 import Homeproduct from "@/components/Homeproduct";
-import News from "@/components/News";
-import Aboutus from "@/components/Aboutus";
 
+import News from "@/components/News";
+import Allnews from "@/components/news/Allnews";
+import New1 from "@/components/news/New1";
+import New2 from "@/components/news/New2";
+import New3 from "@/components/news/New3";
+import New4 from "@/components/news/New4";
+import New5 from "@/components/news/New5";
+import New6 from "@/components/news/New6";
+import New7 from "@/components/news/New7";
+import New8 from "@/components/news/New8";
+import New9 from "@/components/news/New9";
+import New10 from "@/components/news/New10";
+
+import Aboutus from "@/components/Aboutus";
 
 import Speaker from "@/components/Speaker";
 import SpeakerAll from "@/components/speaker/All";
@@ -21,7 +33,6 @@ import Earmuff from "@/components/headphone/Earmuff";
 import Earbud from "@/components/headphone/Earbud";
 import Wireless from "@/components/headphone/Wireless";
 
-
 import Ques from "@/components/repair/Ques";
 import Tabpane1 from "@/components/repair/Tabpane1";
 import Tabpane2 from "@/components/repair/Tabpane2";
@@ -36,10 +47,10 @@ Vue.use(Router);
 
 export default new Router({
   mode: "hash",
-  routes: [ 
+  routes: [
     {
       path: "/",
-      redirect:"homepages",
+      redirect: "homepages",
       name: "Homepage",
       component: Homepage,
       children: [
@@ -47,23 +58,80 @@ export default new Router({
           path: "homepages",
           name: "Homeproduct",
           component: Homeproduct,
-        }
+        },
       ],
-    }, {
-      path: "/news",
-      name: "konwus",
+    },
+    {
+      path: "/knowus",
+      name: "knowus",
       component: Homepage,
       children: [
         {
           path: "",
           name: "News",
           component: News,
+          children:[
+            {
+                path: "allnews",
+                name: "allnews",
+                component: Allnews,
+            },
+            {
+              path: "new1",
+              name: "new1",
+              component: New1,
+            },
+            {
+              path: "new2",
+              name: "new2",
+              component: New2,
+            },
+            {
+              path: "new3",
+              name: "new3",
+              component: New3,
+            },
+            {
+              path: "new4",
+              name: "new4",
+              component: New4,
+            },
+            {
+              path: "new5",
+              name: "new5",
+              component: New5,
+            },
+            {
+              path: "new6",
+              name: "new6",
+              component: New6,
+            },{
+              path: "new7",
+              name: "new7",
+              component: New7,
+            },
+            {
+              path: "new8",
+              name: "new8",
+              component: New8,
+            },{
+              path: "new9",
+              name: "new9",
+              component: New9,
+            },
+            {
+              path: "new10",
+              name: "new10",
+              component: New10,
+            },
+          ],
         },
         {
           path: "aboutus",
-          name: "Aboutus",
+          name: "aboutus",
           component: Aboutus,
         },
+        
       ],
     },
     {
@@ -135,7 +203,8 @@ export default new Router({
           component: Portable,
         },
       ],
-    }, {
+    },
+    {
       path: "/ques",
       name: "Ques",
       component: Ques,
@@ -161,7 +230,8 @@ export default new Router({
           component: Tabpane4,
         },
       ],
-    }, {
+    },
+    {
       path: "/repair",
       name: "Repair",
       component: Repair,
@@ -182,6 +252,6 @@ export default new Router({
           component: Form3,
         },
       ],
-    }
+    },
   ],
 });
