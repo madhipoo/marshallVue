@@ -5,7 +5,7 @@
         <h2>無線藍牙耳機</h2>
       </div>
       <div class="offset-2 col-4">
-        <a href="./Headphones/MODE II/index.html">
+        <router-link :to="`/product/modeii`">
           <img
             :src="require(`@/assets/Headphones/MODE II/f854e398-30e3-4f4d-ae28-d480730290e6-mode-ii-black-01.png`)"
             alt=""
@@ -16,7 +16,7 @@
             <br />
             NTD$5,790
           </p>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

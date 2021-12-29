@@ -300,7 +300,7 @@
             href="https://www.urbanunits.com.tw/SalePage/Index/5689139?cid=185512"
           >馬上選購</a>
           <router-link
-            :to="'/speaker'"
+            :to="'/speaker/all'"
             class="gonow"
           >回產品列表</router-link>
         </div>

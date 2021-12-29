@@ -297,7 +297,7 @@
             href="https://www.urbanunits.com.tw/v2/Search?q=acton&shopId=20983"
             >馬上選購</a
           >
-          <router-link :to="'/speaker'" class="gonow">回產品列表</router-link>
+          <router-link :to="'/speaker/all'" class="gonow">回產品列表</router-link>
         </div>
       </div>
     </section>

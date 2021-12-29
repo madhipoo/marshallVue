@@ -6,14 +6,14 @@
           <div class="col1">
             <div class="title">
               <h1 class="maintitle">
-                <p>WOBURN II BLUETOOTH</p>
+                <p>MAJOR III BLUETOOTH</p>
                 <br />
-                <p>重磅打造，創造等同搖滾現場的震撼力</p>
+                <p>經典，重定義</p>
               </h1>
             </div>
             <p class="button">
-              NTD $23,900<a
-                href="https://www.urbanunits.com.tw/SalePage/Index/5013443?cid=167702"
+              NTD $5,990<a
+                href="https://www.urbanunits.com.tw/SalePage/Index/4469279?cid=167705"
                 class="buynow"
                 >馬上選購</a
               >
@@ -27,8 +27,8 @@
       <div class="product_menu">
         <div class="container">
           <div class="product_title">
-            <h5>WOBURN II BLUETOOTH</h5>
-            <h5>NTD $23,900</h5>
+            <h5>MAJOR III BLUETOOTH</h5>
+            <h5>NTD $5,990</h5>
           </div>
         </div>
       </div>
@@ -36,22 +36,13 @@
         <div class="container">
           <div class="row py-5">
             <div class="col-md-4 order-md-2 column2">
-              <!-- .column1, .column2, .column3, .column4 為細節數量，定義底下.des_block的margin-top，總數最多為8，左右可分開設定。-->
               <div class="des_block">
                 <p class="des_title">
-                  有線連接
+                  引以為傲的聲音
                 </p>
                 <p class="des_content">
-                  除了藍牙5.0，也可以透過3.5mm音源輸入進行播放(線材需自行購買)
-                </p>
-              </div>
-              <div class="des_block">
-                <p class="des_title">
-                  Marshall Bluetooth APP
-                </p>
-                <p class="des_content">
-                  除了面板上旋轉鈕，現在你也可以透過 Marshall Bluetooth APP
-                  將音樂客製成你最愛的樣子。從APP輕鬆切換等化器、面板LED燈的明暗，甚至可以將喇叭開啟或設為休眠狀態
+                  內建客製化40mm動態驅動單體，MAJOR III
+                  藍牙耳機擁有增強的低頻、圓滑的中音和清晰的高頻，皆是承襲自超越半世紀的聲音遺產
                 </p>
               </div>
             </div>
@@ -59,7 +50,7 @@
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/WOBURN II BLUETOOTH/72f10a9f-0f27-4639-b2e6-013a5b31c02a-WOBURN-II.png`)
+                  require(`@/assets/Headphones/MAJOR III BLUETOOTH/de0b6892-412b-42b6-95e4-4badf1f1699c-pos-marshall-major-iii-bt-black-03.png`)
                 "
                 alt=""
                 v-if="see ===1"
@@ -67,7 +58,7 @@
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/WOBURN II BLUETOOTH/99d3e7a5-4124-4d41-a32d-c4845ed6c871-woburn-II_white_1.png`)
+                  require(`@/assets/Headphones/MAJOR III BLUETOOTH/3105646d-5781-4925-923e-e95675569ece-pos-marshall-major-iii-bt-white-01.png`)
                 "
                 alt=""
                 v-else-if="see ===2"
@@ -75,7 +66,7 @@
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/WOBURN II BLUETOOTH/dafa244f-d528-40e6-b732-e45b1c945b63-woburn-II_brown_1.png`)
+                  require(`@/assets/Headphones/MAJOR III BLUETOOTH/9b9f0e91-c08f-4d25-9469-9bdc2d519256-pos-marshall-major-iii-bt-brown-02.png`)
                 "
                 alt=""
                 v-else-if="see ===3"
@@ -106,27 +97,39 @@
                     style="background-color: #cd853f"
                   ></span>
                 </span>
+
                 <a href="#" class="moreimg" @click.prevent="$_openModal()">更多圖片</a>
               </div>
-              <div class="des_block"></div>
+              <div class="des_block">
+                <p>
+                  MAJOR III 藍牙耳罩式耳機將開啟 Marshall
+                  革命史的下一個樂章。最新的移動經典，已被再度精煉，擁有更簡潔完善的設計，外型卻依然保有原始韻味。
+                </p>
+                <p>
+                  MAJOR III
+                  藍牙將帶給你絕佳的自由和便利，無線藍牙aptX技術支援高音質傳輸，一次的充電就能給你30小時的無線搖滾。回歸基礎，MAJOR
+                  III
+                  藍牙耳機由經時間考驗的耐用人工皮革包覆，印上讓人引以為傲的手寫logo，全都是為了向Marshall的搖滾傳奇致敬。
+                </p>
+              </div>
             </div>
 
             <div class="col-md-4 order-md-3 column2">
               <div class="des_block">
                 <p class="des_title">
-                  客製音效
+                  支援藍牙aptX
                 </p>
                 <p class="des_content">
-                  音樂的音量、高音或低音，都能透過旋轉鈕或Marshall Bluetooth
-                  APP進行調整，就算喇叭不在旁邊，遠端控制也不是問題
+                  透過藍牙aptX技術連接，不只能以更高的音質播放音樂，還能降低影音延遲的問題，讓你再也不需面對可怕的對嘴影音
                 </p>
               </div>
               <div class="des_block">
                 <p class="des_title">
-                  多頻道功能
+                  人體工學設計
                 </p>
                 <p class="des_content">
-                  具備多頻道功能設計，讓你輕鬆連接與切換兩個藍牙裝置，現在你可以跟你的朋友輪流播放各自的音樂
+                  MAJOR III
+                  的3D立體樞紐，可以依照頭型自由的旋轉調整至最符合舒適的位置
                 </p>
               </div>
             </div>
@@ -154,14 +157,14 @@
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/WOBURN II BLUETOOTH/ff885fa1-ed5e-4393-a45d-f00fb0b8ab1e-woburn II_black-white-brown_0482_transparent_lowres.png`)"
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/86e6d3a4-040c-4572-8fc2-53d772fd363e-marshall_major III_BT_white_2180_transparent_lowres.png`)"
                   alt=""
                 />
               </p>
-              <h2>比現實聲音更強大</h2>
+              <h2>超越30小時無線搖滾</h2>
               <p>
-                ACTON II
-                搭載三個D類擴大機，支撐雙高音喇叭與低音喇叭，木質音箱構造提供飽和自然的音效，低音反射系統的開口部更是提高低頻的傳輸效率
+                MAJOR III
+                藍牙耳機一次充電就能帶來超越30小時的無線搖滾時間，超越其他同等級藍牙耳機
               </p>
             </div>
           </div>
@@ -170,13 +173,14 @@
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/WOBURN II BLUETOOTH/c5982087-c8c2-43b4-9549-a3e09c12e1d2-woburn II_brown_0391_arm_2_transparent_lowres.png`)"
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/4cb2d0e4-fd1f-4ecd-bd8b-ceb8eda67ad6-marshall_major-III-BT-black_1605_transparent_lowres.png`)"
                   alt=""
                 />
               </p>
-              <h2>藍牙5.0無線連接</h2>
+              <h2>經典 重定義</h2>
               <p>
-                藍牙5.0讓你享受在家中恣意移動，同時自由聆聽音樂，近10公尺內都能穩定無線播放
+                MAJOR III
+                舒適頭帶、精簡立體樞紐與新一代耳罩，以及由厚實橡膠包覆的環形線材，每一個細節都是堅實耐用的證明
               </p>
             </div>
           </div>
@@ -185,16 +189,54 @@
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/WOBURN II BLUETOOTH/dd2525f7-22ca-4290-8ba7-84e68d604739-woburn-II_black_2 (1).png`)"
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/3808ac9b-53b8-4a14-9c72-ab3b3d2bccc5-marshall_major-III-BT-black_1795_transparent_lowres.png`)"
                   alt=""
                 />
               </p>
-              <h2>經典 MARSHALL 設計</h2>
+              <h2>五向控制鈕</h2>
               <p>
-                承襲 Marshall
-                經典設計，木箱搭載荔枝皮革紋外箱、鐵灰編織網與手寫logo，前方銅色鑲板刻上榮耀的創始年1962，致敬
-                Marshall 超過50年的搖滾傳奇
+                透過五向控制鈕，你可以播放、暫停、快轉或是調整音量，同時也是耳機的電源鍵。通話功能也一併整合在內，接聽、拒絕或是掛斷電話，都在彈指之間
               </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <p>
+                <img
+                  :src="
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/9a0aab04-6378-4f56-bbfc-3041be98c596-marshall_major-III-BT-black_1748_transparent_lowres.png`)"
+                  alt=""
+                />
+              </p>
+              <h2>通話功能</h2>
+              <p>
+                簡單的通話操控，讓 MAJOR III
+                藍牙耳機成為每日陪伴的最佳選擇。無線接聽、拒絕或掛斷電話，一鍵搞定
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p>
+                <img
+                  :src="
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/ad79a34f-b676-4dc3-ac69-e49c98e5dfda-marshall_major-III-BT-black_1802_transparent_lowres.png`)"
+                  alt=""
+                />
+              </p>
+              <h2>與好友共享音樂</h2>
+              <p>
+                透過額外的3.5mm音源孔，再接上一隻耳機，就能與朋友一起享受音樂
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p>
+                <img
+                  :src="
+                    require(`@/assets/Headphones/MAJOR III BLUETOOTH/d16dec0a-4bd3-449b-81f1-74ed2ad827f2-marshall_major-III-BT-black_0814_transparent_lowres.png`)"
+                  alt=""
+                />
+              </p>
+              <h2>折疊收納設計</h2>
+              <p>讓 MAJOR III 藍牙耳機成為旅行的最佳夥伴，為長程旅行排憂解難</p>
             </div>
           </div>
         </div>
@@ -211,31 +253,23 @@
                 <tbody>
                   <tr>
                     <th>顏色</th>
-                    <td>經典黑、經典白、復古棕</td>
+                    <td>經典黑、奶油白、復古棕</td>
                   </tr>
                   <tr>
-                    <th>低音單體</th>
-                    <td>50瓦 D類擴大器x2</td>
-                  </tr>
-                  <tr>
-                    <th>高音單體</th>
-                    <td>15瓦 D類擴大器x2</td>
+                    <th>驅動單體</th>
+                    <td>40mm</td>
                   </tr>
                   <tr>
                     <th>響應頻率</th>
-                    <td>30–20,000 Hz</td>
+                    <td>20 Hz-20kHz</td>
                   </tr>
                   <tr>
-                    <th>最大聲壓級</th>
-                    <td>110 dB @ 1 m</td>
+                    <th>靈敏度</th>
+                    <td>97 dB SPL</td>
                   </tr>
                   <tr>
                     <th>重量</th>
-                    <td>8.55 kg</td>
-                  </tr>
-                  <tr>
-                    <th>尺寸</th>
-                    <td>400 x 310 x 200 mm</td>
+                    <td>178g</td>
                   </tr>
                 </tbody>
               </table>
@@ -246,10 +280,10 @@
                 <tbody>
                   <tr>
                     <th>連接方式</th>
-                    <td>5.0 無線藍牙傳輸、3.5mm音源輸入</td>
+                    <td>藍牙 4.0 + 3.5mm 音源線</td>
                   </tr>
                   <tr>
-                    <th>控制面板</th>
+                    <th>內建麥克風&操控鈕</th>
                     <td>是</td>
                   </tr>
                 </tbody>
@@ -262,11 +296,15 @@
               <table>
                 <tbody>
                   <tr>
-                    <th>WOBURN II BLUETOOTH 藍牙喇叭</th>
+                    <th>MAJOR III 藍牙耳機</th>
                     <td></td>
                   </tr>
                   <tr>
-                    <th>原廠充電線</th>
+                    <th>Micro USB充電線</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>3.5mm音源線</th>
                     <td></td>
                   </tr>
                   <tr>
@@ -281,10 +319,10 @@
         <div class="row" id="twobtn">
           <a
             class="gonow"
-            href="https://www.urbanunits.com.tw/v2/Search?q=acton&shopId=20983"
+            href="https://www.urbanunits.com.tw/SalePage/Index/4469279?cid=167705"
             >馬上選購</a
           >
-          <router-link :to="'/speaker/all'" class="gonow">回產品列表</router-link>
+          <router-link :to="'/headphone/all'" class="gonow">回產品列表</router-link>
         </div>
       </div>
     </section>
@@ -292,7 +330,7 @@
 </template>
 <script>
 export default {
-  name: "Woburn",
+  name: "Majorbluetooth",
   data() {
     return {
       open: false,
@@ -300,49 +338,39 @@ export default {
       slides: [
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/72f10a9f-0f27-4639-b2e6-013a5b31c02a-WOBURN-II.png",
+            "Headphones/MAJOR III BLUETOOTH/de0b6892-412b-42b6-95e4-4badf1f1699c-pos-marshall-major-iii-bt-black-03.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/dd2525f7-22ca-4290-8ba7-84e68d604739-woburn-II_black_2 (1).png",
+            "Headphones/MAJOR III BLUETOOTH/7d8fe9ad-7e10-44d3-bd7f-956d66d0458c-pos-marshall-major-iii-bt-black-02.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/61b644ad-ba61-4ae6-b16f-aa869f87b316-woburn-II_black_3.png",
+            "Headphones/MAJOR III BLUETOOTH/82261fa3-614b-4d6f-965e-335c359bd5df-pos-marshall-major-iii-bt-black-01.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/882b574e-69f4-43e4-815a-3382ff120ebf-woburn-II_black_4.png",
+            "Headphones/MAJOR III BLUETOOTH/134e8a86-2698-4a22-8f0a-4ae862cfc53f-pos-marshall-major-iii-bt-white-03.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/99d3e7a5-4124-4d41-a32d-c4845ed6c871-woburn-II_white_1.png",
+            "Headphones/MAJOR III BLUETOOTH/69a3dd72-9f9c-4c5e-9e5a-e5508519b56a-pos-marshall-major-iii-bt-white-02.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/75b78b84-c16c-44e3-a16b-7ab6853134e7-woburn-II_white_2.png",
+            "Headphones/MAJOR III BLUETOOTH/3105646d-5781-4925-923e-e95675569ece-pos-marshall-major-iii-bt-white-01.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/40932813-fa4f-4b75-9a7f-9907adebfed5-woburn-II_white_3.png",
+            "Headphones/MAJOR III BLUETOOTH/e2f301ee-43e1-4266-bddc-f6e7ac9bade3-pos-marshall-major-iii-bt-brown-03.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/0205461b-f392-43f8-8c0b-33c63965b14f-woburn-II_white_4.png",
+            "Headphones/MAJOR III BLUETOOTH/9b9f0e91-c08f-4d25-9469-9bdc2d519256-pos-marshall-major-iii-bt-brown-02.png",
         },
         {
           imgurl:
-            "Speakers/WOBURN II BLUETOOTH/dafa244f-d528-40e6-b732-e45b1c945b63-woburn-II_brown_1.png",
-        },
-        {
-          imgurl:
-            "Speakers/WOBURN II BLUETOOTH/ae0f9207-8b22-48b0-a75d-35be975a18ac-woburn-II_brown_2.png",
-        },{
-          imgurl:
-            "Speakers/WOBURN II BLUETOOTH/d0b41d9c-46da-4b81-ae71-718e731f50e4-woburn-II_brown_3.png",
-        },{
-          imgurl:
-            "Speakers/WOBURN II BLUETOOTH/a7e9440a-6468-4d94-8e42-a76f4d9cd7c4-woburn-II_brown_4.png",
+            "Headphones/MAJOR III BLUETOOTH/04dfdcd7-0983-41e7-88ed-b9f9cc0f262a-pos-marshall-major-iii-bt-brown-01.png",
         },
       ],
       see: 1,
@@ -379,7 +407,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/helpers/_productinfo";
 .scrollanchor {
-  background-image: url("~@/assets/Speakers/WOBURN II BLUETOOTH/Marshall-Woburn-II-Bluetooth-speaker-01.jpg");
+  background-image: url("~@/assets/Headphones/MAJOR III BLUETOOTH/01-marshall_majorIII_bluetooth_aniconinthemaking_lifestyle_rgb_highres_3.jpg");
 }
 .active,
 .modal .modal-content .showslide,

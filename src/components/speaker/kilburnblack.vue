@@ -313,7 +313,7 @@
             href="https://shopping.friday.tw/ec2/product?pid=7517148&cid=414447&sid=1&mid=1"
             >馬上選購</a
           >
-          <router-link :to="'/speaker'" class="gonow">回產品列表</router-link>
+          <router-link :to="'/speaker/all'" class="gonow">回產品列表</router-link>
         </div>
       </div>
     </section>

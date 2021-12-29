@@ -12,10 +12,9 @@
           <p>{{ item.context }}</p>
         </div>
         <p class="button">
-          <a
-            :href="item.gotoweb"
-            class="knewnow"
-          >了解更多</a>
+          <router-link :to="`${item.gotoweb}`" class="knewnow"
+            >了解更多</router-link
+          >
         </p>
         <img
           :src="require(`@/assets/${item.sliderimg}`)"
@@ -24,32 +23,23 @@
         />
       </div>
 
-      <a
-        class="prev"
-        @click.prevent="$_plusSlides(-1)"
-      >&#10094;</a>
-      <a
-        class="next"
-        @click.prevent="$_plusSlides(1)"
-      >&#10095;</a>
-      <div
-        class="dotsbox"
-        style="text-align: center"
-      >
+      <a class="prev" @click.prevent="$_plusSlides(-1)">&#10094;</a>
+      <a class="next" @click.prevent="$_plusSlides(1)">&#10095;</a>
+      <div class="dotsbox" style="text-align: center">
         <span
           class="dot"
           @click.prevent="$_currentSlide(0)"
-          :class="{active:counter === 0}"
+          :class="{ active: counter === 0 }"
         ></span>
         <span
           class="dot"
           @click.prevent="$_currentSlide(1)"
-          :class="{active:counter === 1}"
+          :class="{ active: counter === 1 }"
         ></span>
         <span
           class="dot"
           @click.prevent="$_currentSlide(2)"
-          :class="{active:counter === 2}"
+          :class="{ active: counter === 2 }"
         ></span>
       </div>
     </div>
@@ -65,10 +55,9 @@
               </h1>
             </div>
             <p class="button">
-              <a
-                href="./Speakers/STANMORE II BLUETOOTH/index.html"
-                class="buynow"
-              >了解更多</a>
+              <router-link :to="'/product/stanmorebluetooth'" class="buynow"
+                >了解更多</router-link
+              >
             </p>
           </div>
         </div>
@@ -78,18 +67,13 @@
     <div class="product">
       <div class="container-fluid">
         <div class="row">
-          <div
-            class="col-md-4"
-            v-for="(item, index) in product"
-            :key="index"
-          >
+          <div class="col-md-4" v-for="(item, index) in product" :key="index">
             <div class="description">
               <h5 class="producttitle">{{ item.producttitle }}</h5>
               <p class="button">
-                <a
-                  :href="item.gotoweb"
-                  class="buynow"
-                >馬上選購</a>
+                <router-link :to="`${item.gotoweb}`" class="buynow"
+                  >馬上選購</router-link
+                >
               </p>
             </div>
 
@@ -102,27 +86,17 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <router-link
-              :to="'/repair/speaker'"
-              class="other"
-            >
+            <router-link :to="'/repair/speaker'" class="other">
               <h1 class="othertitle">保固</h1>
             </router-link>
           </div>
           <div class="col-md-4">
-            <router-link
-              :to="'/repair/speaker'"
-              class="other"
-            >
+            <router-link :to="'/repair/speaker'" class="other">
               <h1 class="othertitle">維修</h1>
             </router-link>
-
           </div>
           <div class="col-md-4">
-            <router-link
-              :to="'/ques/speaker'"
-              class="other"
-            >
+            <router-link :to="'/ques/speaker'" class="other">
               <h1 class="othertitle">常見問題</h1>
             </router-link>
           </div>
@@ -154,36 +128,36 @@ export default {
         {
           title: "Acton II",
           context: "藍牙音箱，限時搶購",
-          gotoweb: "./Speakers/ACTON II BLUETOOTH/index.html",
+          gotoweb: "/product/actoniibluetooth",
           sliderimg: "幻燈片1.jpg",
         },
         {
           title: "EMBERTON",
           context: "搖滾，一手掌握",
-          gotoweb: "./Speakers/Emberton/index.html",
+          gotoweb: "/product/emberton",
           sliderimg: "幻燈片2.jfif",
         },
         {
           title: "BUILT FOR LOUD",
           context: "MoDE II 重磅登場，限定通路搶購中",
-          gotoweb: "./Headphones/MODE II/index.html",
+          gotoweb: "/product/modeii",
           sliderimg: "幻燈片3.jpeg",
         },
       ],
       product: [
         {
           producttitle: "Bluetooth英搖經典",
-          gotoweb: "./Speakers/WOBURN II BLUETOOTH/index.html",
+          gotoweb: "/product/woburniibluetooth",
           productimg: "英國搖滾.jfif",
         },
         {
           producttitle: "Major IV",
-          gotoweb: "./Headphones/MAJOR IV/index.html",
+          gotoweb: "/product/majoriv",
           productimg: "marshall_majorIV_1005 .jpg",
         },
         {
           producttitle: "Stockwell II藍芽喇叭",
-          gotoweb: "./Speakers/STOCKWELL II/index.html",
+          gotoweb: "/product/stockwell",
           productimg: "手提式音箱.jfif",
         },
       ],

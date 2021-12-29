@@ -6,17 +6,17 @@
           <div class="col1">
             <div class="title">
               <h1 class="maintitle">
-                <p>ACTON II BLUETOOTH</p>
+                <p>MAJOR III</p>
                 <br />
                 <p>
-                  雖然 ACTON II
-                  個頭精巧，但千萬別被外表騙了，搭載三個D類擴大機支撐雙高音喇叭與低音喇叭，聲音效果讓人驚豔。
+                  Marshall
+                  革命史的下一個篇章，最新的經典已被再度精煉，擁有更簡潔完善的設計，外型卻依然保有原始韻味
                 </p>
               </h1>
             </div>
             <p class="button">
-              NTD $11,900<a
-                href="https://www.urbanunits.com.tw/v2/Search?q=acton&shopId=20983"
+              NTD $3,290<a
+                href="https://www.urbanunits.com.tw/SalePage/Index/4470408?cid=167704"
                 class="buynow"
                 >馬上選購</a
               >
@@ -30,8 +30,8 @@
       <div class="product_menu">
         <div class="container">
           <div class="product_title">
-            <h5>ACTON II BLUETOOTH</h5>
-            <h5>NTD $11,900</h5>
+            <h5>MAJOR III</h5>
+            <h5>NTD $3,290</h5>
           </div>
         </div>
       </div>
@@ -40,65 +40,51 @@
           <div class="row py-5">
             <div class="col-md-4 order-md-2 column2">
               <!-- .column1, .column2, .column3, .column4 為細節數量，定義底下.des_block的margin-top，總數最多為8，左右可分開設定。-->
-              <div class="des_block">
-                <p class="des_title">有線連接</p>
-                <p class="des_content">
-                  除了藍牙5.0，也可以透過3.5mm音源輸入進行播放(線材需自行購買)
-                </p>
-              </div>
-              <div class="des_block">
-                <p class="des_title">Marshall Bluetooth APP</p>
-                <p class="des_content">
-                  除了面板上旋轉鈕，現在你也可以透過 Marshall Bluetooth APP
-                  將音樂客製成你最愛的樣子。從APP輕鬆切換等化器、面板LED燈的明暗，甚至可以將喇叭開啟或設為休眠狀態
-                </p>
-              </div>
             </div>
             <div class="col-md-4 order-md-1">
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/ACTON II BLUETOOTH/ddfda794-393e-4a91-ab7a-8c1622f83393-ACTON-II.png`)
+                  require(`@/assets/Headphones/MAJOR III/ca29db5a-7c29-49bf-8ba6-e4998c7cc17d-major-III-black_1.png`)
                 "
                 alt=""
-                v-if="see ===1"
+                v-if="see === 1"
               />
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/ACTON II BLUETOOTH/7a4be10f-cbd4-464c-a218-cb278c91a5d9-acton-II_white_1.png`)
+                  require(`@/assets/Headphones/MAJOR III/f76d3b7d-4de5-4a28-9ebc-dd5de495544d-pos-marshall-major-iii-white-02.png`)
                 "
                 alt=""
-                v-else-if="see ===2"
+                v-else-if="see === 2"
               />
               <img
                 class="product_main"
                 :src="
-                  require(`@/assets/Speakers/ACTON II BLUETOOTH/9e9d8083-0d51-45b5-a8b7-bd79c8d12c68-acton-II_brown_1.png`)
+                  require(`@/assets/Headphones/MAJOR III/5bf96288-305d-4f68-8c87-447aaa46a2b8-pos-marshall-major-iii-brown-02.png`)
                 "
                 alt=""
-                v-else-if="see ===3"
+                v-else-if="see === 3"
               />
               <div class="color_change">
                 <span
-                  class="color-dot-wrapper" :calss="{active_color: see===1}"
+                  class="color-dot-wrapper"
+                  :calss="{ active_color: see === 1 }"
                   @click="$_seepic(1)"
                 >
                   <span class="color-dot" style="background-color: #000"></span>
                 </span>
                 <span
-                  class="color-dot-wrapper" :calss="{active_color: see===2}"
-
+                  class="color-dot-wrapper"
+                  :calss="{ active_color: see === 2 }"
                   @click="$_seepic(2)"
-
                 >
                   <span class="color-dot" style="background-color: #fff"></span>
                 </span>
                 <span
-                  class="color-dot-wrapper" :calss="{active_color: see===3}"
-
+                  class="color-dot-wrapper"
+                  :calss="{ active_color: see === 3 }"
                   @click="$_seepic(3)"
-
                 >
                   <span
                     class="color-dot"
@@ -110,24 +96,9 @@
                   >更多圖片</a
                 >
               </div>
-              <div class="des_block"></div>
             </div>
 
-            <div class="col-md-4 order-md-3 column2">
-              <div class="des_block">
-                <p class="des_title">客製音效</p>
-                <p class="des_content">
-                  音樂的音量、高音或低音，都能透過旋轉鈕或Marshall Bluetooth
-                  APP進行調整，就算喇叭不在旁邊，遠端控制也不是問題
-                </p>
-              </div>
-              <div class="des_block">
-                <p class="des_title">多頻道功能</p>
-                <p class="des_content">
-                  具備多頻道功能設計，讓你輕鬆連接與切換兩個藍牙裝置，現在你可以跟你的朋友輪流播放各自的音樂
-                </p>
-              </div>
-            </div>
+            <div class="col-md-4 order-md-3 column2"></div>
             <div id="myModal" class="modal" :class="{ active: this.open }">
               <span class="close" @click.prevent="$_openModal()">&times;</span>
               <div class="modal-content">
@@ -139,7 +110,6 @@
                 >
                   <img :src="require(`@/assets/${item.imgurl}`)" />
                 </div>
-
                 <a class="prev" @click.prevent="$_plusSlides(-1)">&#10094;</a>
                 <a class="next" @click.prevent="$_plusSlides(1)">&#10095;</a>
               </div>
@@ -155,49 +125,58 @@
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/ACTON II BLUETOOTH/0f013da4-9c2f-42d6-8c43-9223bebeecc8-acton II_white_0651_arm1_Lowres.png`)
+                    require(`@/assets/Headphones/MAJOR III/66b9e992-a096-4138-a7ef-8b2438c7006b-major iii-內容1.png`)
                   "
                   alt=""
                 />
               </p>
-              <h2>比現實聲音更強大</h2>
+              <h2>經典重定義</h2>
               <p>
-                ACTON II
-                搭載三個D類擴大機，支撐雙高音喇叭與低音喇叭，木質音箱構造提供飽和自然的音效，低音反射系統的開口部更是提高低頻的傳輸效率
+                MAJOR III
+                舒適頭帶、精簡後的立體樞紐、新一代耳罩，以及由厚實橡膠包覆的加粗環形線材，每一個細節都是堅實耐用的證明
               </p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-10 offset-md-1 content_p">
+            <div class="col-sm-4">
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/ACTON II BLUETOOTH/93b2762f-4e52-42a9-853a-cd69be2e3244-acton II_brown_0446_phone_transparent_lowres.png`)
+                    require(`@/assets/Headphones/MAJOR III/655789ff-88a7-4118-9899-c1c91b230673-major-III內容2.png`)
                   "
                   alt=""
                 />
               </p>
-              <h2>藍牙5.0無線連接</h2>
+              <h2>折疊設計</h2>
+              <p>讓 MAJOR III 成為旅行的最佳夥伴，為長程旅行排憂解難</p>
+            </div>
+            <div class="col-sm-4">
               <p>
-                藍牙5.0讓你享受在家中恣意移動，同時自由聆聽音樂，近10公尺內都能穩定無線播放
+                <img
+                  :src="
+                    require(`@/assets/Headphones/MAJOR III/6abc053b-2602-4f62-9c8f-ff29e71ed2cf-major-III內容3.png`)
+                  "
+                  alt=""
+                />
+              </p>
+              <h2>人體工學設計</h2>
+              <p>
+                MAJOR III
+                的3D立體樞紐，可以依照頭型自由的旋轉調整至最符合舒適的位置
               </p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10 offset-md-1 content_p">
+            <div class="col-sm-4">
               <p>
                 <img
                   :src="
-                    require(`@/assets/Speakers/ACTON II BLUETOOTH/bce026be-b945-41a3-b391-b3e5805cf7bc-acton II_black_4 (1).png`)
+                    require(`@/assets/Headphones/MAJOR III/d6c139a2-358d-4f90-877b-42a197aadaa3-major-III內容4.png`)
                   "
                   alt=""
                 />
               </p>
-              <h2>經典 MARSHALL 設計</h2>
+              <h2>內建麥克風&控制鈕</h2>
               <p>
-                承襲 Marshall
-                經典設計，木箱搭載荔枝皮革紋外箱、鐵灰編織網與手寫logo，前方銅色鑲板刻上榮耀的創始年1962，致敬
-                Marshall 超過50年的搖滾傳奇
+                透過耳機線上的控制鈕，你可以控制你的耳機和通話功能，並透過可拆式3.5mm音源線上的麥克風接聽電話。透過簡單按鈕，就能接聽/掛斷電話、播放/暫停音樂，或是控制音樂
               </p>
             </div>
           </div>
@@ -214,32 +193,24 @@
               <table>
                 <tbody>
                   <tr>
-                    <th>顏色</th>
-                    <td>經典黑、經典白、復古棕</td>
-                  </tr>
-                  <tr>
-                    <th>低音單體</th>
-                    <td>30瓦 D類擴大器x1</td>
-                  </tr>
-                  <tr>
-                    <th>高音單體</th>
-                    <td>15瓦 D類擴大器x2</td>
+                    <th>驅動單體</th>
+                    <td>40mm</td>
                   </tr>
                   <tr>
                     <th>響應頻率</th>
-                    <td>50–20,000 Hz</td>
+                    <td>20 Hz-20kHz</td>
                   </tr>
                   <tr>
-                    <th>最大聲壓級</th>
-                    <td>98 dB @ 1 m</td>
+                    <th>靈敏度</th>
+                    <td>99 dB SPL</td>
+                  </tr>
+                  <tr>
+                    <th>阻抗</th>
+                    <td>32 Ω</td>
                   </tr>
                   <tr>
                     <th>重量</th>
-                    <td>2.85 kg</td>
-                  </tr>
-                  <tr>
-                    <th>尺寸</th>
-                    <td>260 x 160 x 150 mm</td>
+                    <td>178g</td>
                   </tr>
                 </tbody>
               </table>
@@ -249,11 +220,7 @@
               <table>
                 <tbody>
                   <tr>
-                    <th>連接方式</th>
-                    <td>5.0 無線藍牙傳輸、3.5mm音源輸入</td>
-                  </tr>
-                  <tr>
-                    <th>控制面板</th>
+                    <th>內建麥克風&操控鈕</th>
                     <td>是</td>
                   </tr>
                 </tbody>
@@ -266,11 +233,11 @@
               <table>
                 <tbody>
                   <tr>
-                    <th>ACTON II BLUETOOTH 藍牙喇叭</th>
+                    <th>MAJOR III 耳罩式耳機</th>
                     <td></td>
                   </tr>
                   <tr>
-                    <th>原廠充電線</th>
+                    <th>3.5mm音源線</th>
                     <td></td>
                   </tr>
                   <tr>
@@ -285,10 +252,10 @@
         <div class="row" id="twobtn">
           <a
             class="gonow"
-            href="https://www.urbanunits.com.tw/v2/Search?q=acton&shopId=20983"
+            href="https://www.urbanunits.com.tw/SalePage/Index/4470408?cid=167704"
             >馬上選購</a
           >
-          <router-link :to="'/speaker/all'" class="gonow">回產品列表</router-link>
+          <router-link :to="'/headphone/all'" class="gonow">回產品列表</router-link>
         </div>
       </div>
     </section>
@@ -296,7 +263,7 @@
 </template>
 <script>
 export default {
-  name: "Acton",
+  name: "Major",
   data() {
     return {
       open: false,
@@ -304,43 +271,35 @@ export default {
       slides: [
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/ddfda794-393e-4a91-ab7a-8c1622f83393-ACTON-II.png",
+            "Headphones/MAJOR III/ca29db5a-7c29-49bf-8ba6-e4998c7cc17d-major-III-black_1.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/33130c9f-1af2-43f8-9a0f-9143c2ba38b8-acton-II_black_2.png",
+            "Headphones/MAJOR III/2fee2e5c-5705-4cf1-aaf1-f0fafbb47789-major-III-black_2.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/689c34dc-22e8-43cd-94c3-d8cad7e9c4d8-acton II_black_3.png",
+            "Headphones/MAJOR III/f76d3b7d-4de5-4a28-9ebc-dd5de495544d-pos-marshall-major-iii-white-02.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/7a4be10f-cbd4-464c-a218-cb278c91a5d9-acton-II_white_1.png",
+            "Headphones/MAJOR III/74a7c423-4d2e-4494-98a2-6f69d9baeb72-major-III-white_2.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/c555115d-4e80-4cf2-b8dc-72f648e8e90b-acton-II_white_2.png",
+            "Headphones/MAJOR III/0e3f8dbe-3e41-4f13-9120-c4a4ccb7d371-major-III-white_3.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/afc744c1-f907-4582-9720-d3644c0edff6-acton II_white_3.png",
+            "Headphones/MAJOR III/5bf96288-305d-4f68-8c87-447aaa46a2b8-pos-marshall-major-iii-brown-02.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/11383895-55a3-4fee-971b-f19b18d53764-acton II_white_4.png",
+            "Headphones/MAJOR III/0a84b076-51db-43d4-8d53-8bfa85cead39-major-III-brown_3.png",
         },
         {
           imgurl:
-            "Speakers/ACTON II BLUETOOTH/9e9d8083-0d51-45b5-a8b7-bd79c8d12c68-acton-II_brown_1.png",
-        },
-        {
-          imgurl:
-            "Speakers/ACTON II BLUETOOTH/2af63d3e-6606-47ec-a105-a3ddd5875ce7-acton II_brown_2.png",
-        },
-        {
-          imgurl:
-            "Speakers/ACTON II BLUETOOTH/dc7cfce0-f690-4f81-81a4-2e23dde8c43e-acton II_brown_3.png",
+            "Headphones/MAJOR III/f1fa672f-8d11-431f-b7dd-2f0aeee763bd-major-III-brown_2.png",
         },
       ],
       see: 1,
@@ -367,9 +326,9 @@ export default {
 
       this.$_slidefun(this.counter);
     },
-    $_seepic:function(n){
-      this.see=n;
-    }
+    $_seepic: function (n) {
+      this.see = n;
+    },
   },
 };
 </script>
@@ -377,7 +336,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/helpers/_productinfo";
 .scrollanchor {
-  background-image: url("~@/assets/Speakers/ACTON II BLUETOOTH/marshall_stanmore_ii_voice_1.jpg");
+  background-image: url("~@/assets/Headphones/MAJOR III/05R5IqKUu9t9C6AnT53fynJ-3..1576114454.jpg");
 }
 .active,
 .modal .modal-content .showslide,

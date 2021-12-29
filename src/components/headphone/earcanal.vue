@@ -5,7 +5,7 @@
         <h2>耳道式耳機</h2>
       </div>
       <div class="offset-1 col-4">
-        <a href="./Headphones/MODE EQ/index.html">
+        <router-link :to="`/product/modeeq`">
           <img
             :src="require(`@/assets/Headphones/MODE EQ/f3972b14-1290-4035-84bc-4f7a7b394a96-pos-marshall-mode-eq-01.png`)"
             alt=""
@@ -16,10 +16,10 @@
             <br />
             NTD$3,190
           </p>
-        </a>
+        </router-link>
       </div>
       <div class="col-4">
-        <a href="./Headphones/MODE/index.html">
+        <router-link :to="`/product/mode`">
           <img
             :src="require(`@/assets/Headphones/MODE/1ccb5a6e-20c4-489f-ace4-7863660b4983-marshall-mode-01.png`)"
             alt=""
@@ -30,7 +30,7 @@
             <br />
             NTD$2,290
           </p>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

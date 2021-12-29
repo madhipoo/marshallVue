@@ -47,6 +47,15 @@ import Noise from "@/components/headphone/Noise";
 import Earmuff from "@/components/headphone/Earmuff";
 import Earbud from "@/components/headphone/Earbud";
 import Wireless from "@/components/headphone/Wireless";
+import Major from "@/components/headphone/Major";
+import Majorbluetooth from "@/components/headphone/Majorbluetooth";
+import Majoriv from "@/components/headphone/Majoriv";
+import Midanc from "@/components/headphone/Midanc";
+import Mode from "@/components/headphone/Mode";
+import Modeii from "@/components/headphone/Modeii";
+import Modeeq from "@/components/headphone/Modeeq";
+import Minorii from "@/components/headphone/Minorii";
+import Monitor from "@/components/headphone/Monitor";
 
 import Ques from "@/components/repair/Ques";
 import Tabpane1 from "@/components/repair/Tabpane1";
@@ -156,7 +165,7 @@ export default new Router({
       component: Headphone,
       children: [
         {
-          path: "",
+          path: "all",
           name: "HeadphoneAll",
           component: HeadphoneAll,
         },
@@ -199,7 +208,7 @@ export default new Router({
       component: Speaker,
       children: [
         {
-          path: "",
+          path: "all",
           name: "SpeakerAll",
           component: SpeakerAll,
         },
@@ -348,6 +357,51 @@ export default new Router({
           path: "stanmorebluetooth",
           name: "Stanmorebluetooth",
           component: Stanmorebluetooth,
+        },
+        {
+          path: "major",
+          name: "Major",
+          component: Major,
+        },
+        {
+          path: "majorbluetooth",
+          name: "Majorbluetooth",
+          component: Majorbluetooth,
+        },
+        {
+          path: "majoriv",
+          name: "Majoriv",
+          component: Majoriv,
+        },
+        {
+          path: "midanc",
+          name: "Midanc",
+          component: Midanc,
+        },
+        {
+          path: "mode",
+          name: "Mode",
+          component: Mode,
+        },
+        {
+          path: "modeii",
+          name: "Modeii",
+          component: Modeii,
+        },
+        {
+          path: "modeeq",
+          name: "Modeeq",
+          component: Modeeq,
+        },
+        {
+          path: "minorii",
+          name: "Minorii",
+          component: Minorii,
+        },
+        {
+          path: "monitor",
+          name: "Monitor",
+          component: Monitor,
         },
       ],
     },

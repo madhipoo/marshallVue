@@ -27,7 +27,7 @@
         <div class="col-12">
           <h6 class="info-title">產品</h6>
           <div class="product-info-list">
-            <router-link :to="'/speaker'">
+            <router-link :to="'/speaker/all'">
               <div
                 class="info-product"
                 id="speakerimg"
@@ -35,7 +35,7 @@
                 <p>喇叭</p>
               </div>
             </router-link>
-            <router-link :to="'/headphone'">
+            <router-link :to="'/headphone/all'">
               <div
                 class="info-product"
                 id="headpkoneimg"

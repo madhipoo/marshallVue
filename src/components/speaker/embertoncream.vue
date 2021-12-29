@@ -248,7 +248,7 @@
             href="https://www.urbanunits.com.tw/SalePage/Index/7135563"
           >馬上選購</a>
           <router-link
-            :to="'/speaker'"
+            :to="'/speaker/all'"
             class="gonow"
           >回產品列表</router-link>
         </div>
@@ -289,7 +289,6 @@ export default {
   },
   created() {
     this.$_slidefun(this.counter);
-    this.$_windowcheck();
   },
   methods: {
     $_openModal: function () {
@@ -308,25 +307,6 @@ export default {
       this.counter += n;
 
       this.$_slidefun(this.counter);
-    },
-    $_windowcheck: function () {
-      if ($(window).width() < 768) {
-        $(".product_detail .des_block").click(function () {
-          $(".product_detail .des_content").css("display", "none");
-          $(this).children(".des_content").css("display", "block");
-          $(".product_detail .des_block")
-            .find(".fa-minus")
-            .removeClass("fa-minus")
-            .addClass("fa-plus");
-          $(this).find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
-        });
-      }
-      $(".color-dot-wrapper").click(function () {
-        $(".color-dot-wrapper").removeClass("active-color");
-        $(this).addClass("active-color");
-        var active_item = $(this).data("item");
-        $(".product_main").attr("src", $(this).data("src"));
-      });
     },
   },
 };

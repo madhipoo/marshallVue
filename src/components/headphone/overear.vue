@@ -6,7 +6,7 @@
       </div>
 
       <div class="offset-2 col-4">
-        <a href="./Headphones/MAJOR III/index.html">
+        <router-link :to="`/product/major`">
           <img
             :src="require(`@/assets/Headphones/MAJOR III/ca29db5a-7c29-49bf-8ba6-e4998c7cc17d-major-III-black_1.png`)"
             alt=""
@@ -17,7 +17,7 @@
             <br />
             NTD$3,290
           </p>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
