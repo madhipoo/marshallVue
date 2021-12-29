@@ -67,22 +67,22 @@ export default {
         productimg:"Speakers/STOCKWELL II 古銅黑/66e0d0f8-6763-46fd-ac5b-c805799a85b2-Stockwell II BB_1.png",
         title:"STOCKWELL II(古銅黑)",
         price:"NTD$7,900",
-        gotoweb:"./Speakers/STOCKWELL II 古銅黑/index.html",
+        gotoweb:"/product/stockwellblack",
       },{
         productimg:"Speakers/STOCKWELL II/120c2222-8490-4f37-b661-bd486fd8b559-Stockwell_II_1.png",
         title:"STOCKWELL II(經典黑)",
         price:"NTD$7,900",
-        gotoweb:"./Speakers/STOCKWELL II/index.html",
+        gotoweb:"/product/stockwell",
       },{
         productimg:"Speakers/KILBURN II 古銅黑/bfab10ec-daba-4f20-9514-d39cf61b6009-marshall-kilburn-ii-black-brass-01.png",
         title:"KILBURN II(古銅黑)",
         price:"NTD$10,900",
-        gotoweb:"./Speakers/KILBURN II 古銅黑/index.html",
+        gotoweb:"/product/kilburnblack",
       },{
         productimg:"Speakers/KILBURN II/5536b7b6-c882-442b-b4a5-a05e097dd897-marshall_kilburn_II_black_1 new.png",
         title:"KILBURN II(經典黑)",
         price:"NTD$10,900",
-        gotoweb:"./Speakers/KILBURN II/index.html",
+        gotoweb:"/product/kilburn",
       },{
         productimg:"Speakers/TUFTON 古銅黑/7bf0f63e-6c2e-4cba-b8f2-81137e407a8e-marshall-tufton-black-brass-01.png",
         title:"TUFTON (古銅黑)",

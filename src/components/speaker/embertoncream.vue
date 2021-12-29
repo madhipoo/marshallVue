@@ -333,7 +333,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~@/assets/helpers/_productinfo";
 .scrollanchor {
   background-image: url("~@/assets/Speakers/EMBERTON CREAM/9865038c-76aa-44f4-93c7-d6b01baa1f37-EmbertonCream_content1.jpg");

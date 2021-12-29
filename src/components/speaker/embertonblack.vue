@@ -349,7 +349,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~@/assets/helpers/_productinfo";
 .scrollanchor {
   background-image: url("~@/assets/Speakers/EMBERTON 古銅黑/8317815d-78dc-4f82-8b53-c61a32ec0b7d-Emberton BB_內容7_1920x1080.jpg");

@@ -314,7 +314,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~@/assets/helpers/_productinfo";
 .scrollanchor {
   background-image: url("~@/assets/Speakers/TUFTON 古銅黑/MARSHALL+(2).jpg");

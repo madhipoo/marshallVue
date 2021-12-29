@@ -29,6 +29,15 @@ import Embertonblack from "@/components/speaker/Embertonblack";
 import Embertonforest from "@/components/speaker/Embertonforest";
 import Embertoncream from "@/components/speaker/Embertoncream";
 import Emberton from "@/components/speaker/Emberton";
+import Kilburn from "@/components/speaker/Kilburn";
+import Kilburnblack from "@/components/speaker/Kilburnblack";
+import Stockwell from "@/components/speaker/Stockwell";
+import Stockwellblack from "@/components/speaker/Stockwellblack";
+import Acton from "@/components/speaker/Acton";
+import Woburn from "@/components/speaker/Woburn";
+import Uxbridge from "@/components/speaker/Uxbridge";
+import Stanmorevoice from "@/components/speaker/Stanmorevoice";
+import Stanmorebluetooth from "@/components/speaker/Stanmorebluetooth";
 
 import Headphone from "@/components/Headphone";
 import HeadphoneAll from "@/components/headphone/All";
@@ -295,26 +304,51 @@ export default new Router({
           name: "Emberton",
           component: Emberton,
         },
-        // {
-        //   path: "embertonforest",
-        //   name: "Embertonforest",
-        //   component: Embertonforest,
-        // },
-        // {
-        //   path: "embertonforest",
-        //   name: "Embertonforest",
-        //   component: Embertonforest,
-        // },
-        // {
-        //   path: "embertonforest",
-        //   name: "Embertonforest",
-        //   component: Embertonforest,
-        // },
-        // {
-        //   path: "embertonforest",
-        //   name: "Embertonforest",
-        //   component: Embertonforest,
-        // },
+        {
+          path: "kilburn",
+          name: "Kilburn",
+          component: Kilburn,
+        },
+        {
+          path: "kilburnblack",
+          name: "Kilburnblack",
+          component: Kilburnblack,
+        },
+        {
+          path: "stockwell",
+          name: "Stockwell",
+          component: Stockwell,
+        },
+        {
+          path: "stockwellblack",
+          name: "Stockwellblack",
+          component: Stockwellblack,
+        },
+        {
+          path: "actoniibluetooth",
+          name: "Acton",
+          component: Acton,
+        },
+        {
+          path: "woburniibluetooth",
+          name: "Woburn",
+          component: Woburn,
+        },
+        {
+          path: "uxbridge",
+          name: "Uxbridge",
+          component: Uxbridge,
+        },
+        {
+          path: "stanmorevoice",
+          name: "Stanmorevoice",
+          component: Stanmorevoice,
+        },
+        {
+          path: "stanmorebluetooth",
+          name: "Stanmorebluetooth",
+          component: Stanmorebluetooth,
+        },
       ],
     },
   ],

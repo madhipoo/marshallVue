@@ -5,9 +5,11 @@
         <h2>智慧語音系列</h2>
       </div>
       <div class="offset-1 col-4">
-        <a href="./Speakers/UXBRIDGE VOICE/index.html">
+        <router-link :to="'/product/uxbridge'">
           <img
-            :src="require(`@/assets/Speakers/POS-1-Uxbridge-Black-Alexa-Hires.png`)"
+            :src="
+              require(`@/assets/Speakers/POS-1-Uxbridge-Black-Alexa-Hires.png`)
+            "
             alt=""
             class="product_img"
           />
@@ -16,12 +18,14 @@
             <br />
             NTD$8,900
           </p>
-        </a>
+        </router-link>
       </div>
       <div class="col-4">
-        <a href="./Speakers/STANMORE II VOICE/index.html">
-          <img
-            :src="require(`@/assets/Speakers/marshall-stanmore-ii-bt-black-01.png`)"
+        <router-link :to="'/product/stanmorevoice'"
+          ><img
+            :src="
+              require(`@/assets/Speakers/marshall-stanmore-ii-bt-black-01.png`)
+            "
             alt=""
             class="product_img"
           />
@@ -30,7 +34,7 @@
             <br />
             NTD$18,900
           </p>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -40,22 +44,19 @@
 export default {
   name: "Smart",
   data() {
-    return {
-      
-    };
+    return {};
   },
 };
 </script>
 
 <style lang="scss">
 .offset-1 {
-    margin-left: 16.666667%;
+  margin-left: 16.666667%;
 }
 
 @media screen and (max-width: 767px) {
   .offset-1 {
-      margin-left: 0;
+    margin-left: 0;
   }
-
 }
 </style>
